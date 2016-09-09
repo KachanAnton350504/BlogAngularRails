@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   
 
   resources :rubrics, defaults: {format: 'json'}
+  get "rubrics/name/:id", to: "rubrics#name", defaults: {format: 'json'}
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
    devise_for :users#, controllers: { sessions: 'users/sessions', 
   #                                 registrations: 'users/registrations'} 

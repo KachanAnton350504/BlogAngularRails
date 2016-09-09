@@ -2,7 +2,7 @@
   <div class="post-preview">
     <a ng-show="post.title" href="#/posts/{{post.id}}">
         <h2 class="post-title">
-           {{post.title}}
+           {{post.title}}{{post.rubrics.first.name}}
         </h2>
     </a>
         <h3 class="post-subtitle-cut" ng-show="post.body">

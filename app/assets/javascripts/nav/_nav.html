@@ -8,6 +8,14 @@
         <li ng-show="signedIn()">
           <a href="#/home/create">Create Post</a>
         </li>
+        <li class="nav-item dropdown-toggle">
+                            <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">Rubrics  <span class="caret"></span></a>
+                           
+                            <ul class="dropdown-menu" >
+                              <li ng-repeat="rubric in rubrics">
+                              <a ng-href="#/rubrics/{{rubric.id}}">{{rubric.name}}</a></li>
+                            </ul>                            
+                        </li><!--//dropdown--> 
       </ul>
        
       <ul class="nav navbar-nav navbar-right">  

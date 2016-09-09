@@ -1,10 +1,16 @@
 angular.module('Blog')
 .controller('NavCtrl', [
   '$scope',
+  'posts',
   'Auth',
   'Flash', 
-  function($scope, Auth, Flash) {
+  function($scope, posts, Auth, Flash) {
     $scope.signedIn = Auth.isAuthenticated;
+    
+    posts.getRubrics().then(function(rubrics) {
+    $scope.rubrics = rubrics.data;
+  });
+
     $scope.logout = function() { 
       Auth.logout().then(
       $scope.successAlert = function (err) {
@@ -12,13 +18,10 @@ angular.module('Blog')
         $scope.id = Flash.create('success', message);
         console.log(err);
       },
-      function() {
-        // var message = "Signed in successfully."
-        // var id = Flash.create('success', message);
-        });
+      function() {});
     };
-    // }
-       Auth.currentUser().then(function (user) {
+      
+      Auth.currentUser().then(function (user) {
          $scope.user = user;
        }, 
        function(error) {

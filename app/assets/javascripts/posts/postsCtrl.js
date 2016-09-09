@@ -15,6 +15,8 @@ function($scope, posts, $stateParams, $sce, Auth){
     $scope.post = post;
     $scope.comments_count = post.comments.length
   });
+
+  
   posts.getRubrics().then(function(rubrics) {
     $scope.rubrics = rubrics.data;
   });

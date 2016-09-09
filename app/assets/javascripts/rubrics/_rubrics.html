@@ -1,18 +1,6 @@
-<div id="notice"  style="visibility: hidden;">{{alert}}</div>
-  <h1>{{rubric.name}}</h1>
-  <div class="col-md-6">
+    <h1 class="text-center">{{rubric_name}}</h1>
+    <br>
     <div ng-include="'layout/_posts.html'"></div>
-    
-    <form  ng-show="signedIn()" ng-submit="addPost()">
-      <h3>Add a new post</h3>
-      <label>Title:</label>
-      <input type="text" class="form-control" placeholder="Title" ng-model="title"></input>
-     
-      <textarea class="form-control" rows="5" placeholder="Body" ng-model="body"></textarea>
-      
-      <button type="submit" class="btn btn-primary">Post</button>
-    </form>
-  </div>
+   
 
-  <div ng-include="'layout/_rubrics_list.html'"></div>
   
