@@ -8,8 +8,6 @@ angular.module('Blog', ['ui.router',
 '$stateProvider',
 '$urlRouterProvider',
 function($stateProvider, $urlRouterProvider) {
-  
-
 
   $stateProvider
     .state('home', {

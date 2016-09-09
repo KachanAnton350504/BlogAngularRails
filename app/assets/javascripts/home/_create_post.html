@@ -1,3 +1,11 @@
+<div id="success" class="alert alert-success"  ng-show='alert'>
+      <button type="button" class="close" data-dismiss="alert">x</button>
+       {{alert}}
+    </div>
+
+    <div ng-include="'auth/_errors.html'"></div>
+
+ 
 <form ng-show="signedIn()" ng-submit="addPost()">
       <h3>Add a new post</h3>
       <label>Title:</label>

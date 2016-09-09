@@ -4,15 +4,15 @@ angular.module('Blog')
 'posts',
 '$sce',
 '$state',
+'$timeout',
 'Auth',
 'limitToFilter',
 'Flash',
-function($scope, posts, $sce, $state, Auth, Flash, limitToFilter){
+function($scope, posts, $sce, $state, $timeout, Auth, Flash, limitToFilter){
   $scope.posts_url = '/posts.json';   
   $scope.trustAsHtml = $sce.trustAsHtml;
   $scope.signedIn = Auth.isAuthenticated;
 
- console.log(posts);
   
   $scope.limit = 200;
   
@@ -23,35 +23,23 @@ function($scope, posts, $sce, $state, Auth, Flash, limitToFilter){
   posts.getRubrics().then(function(rubrics) {
     $scope.rubrics = rubrics.data;
   });
-$scope.successAlert = function(error) {
-            console.log("error")
-            console.log(error)
-      var message = 'Signed in successfully';
-      $scope.id = Flash.create('success', message);
-  }
+
   $scope.rubric_ids = [];
   $scope.addPost = function(){
-   $scope.successAlert = posts.addPost({
+   posts.addPost({
       title: $scope.title,
       rubric_ids: $scope.rubric_ids,
       body: $scope.body,
-    }).then(function (error) {
-          console.log(error.data)
-          $scope.successAlert
-          $scope.successAlert = function(){$scope.id = Flash.create('success', error.data);}
-          $state.go('home');
+    }).then(function (errors) {
+          if(errors.id){
+            $scope.alert = 'The Post was successfully created.';
+            $timeout(function () {
+              $state.go('home');
+          }, 2000);
+          } else {
+            $scope.errors = errors
+            $scope.show_error_messages = Object.keys( errors ).length;
+          }
+  
         });}   
 }]);
-
-
-// Auth.login($scope.user).then(
-//       $scope.successAlert = function () {
-//       var message = 'Signed in successfully';
-//       $scope.id = Flash.create('success', message);
-//       $state.go('home');
-//     },
-//        function(error) {
-//             var message = error.data.error;
-//             $scope.id = Flash.create('danger', message);
-//           });
-//     };

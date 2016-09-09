@@ -20,7 +20,9 @@ function($http){
   
   o.addPost = function(post) {
     
-    return $http.post('/posts.json', post);
+    return $http.post('/posts.json', post).then(function(result){
+      return result.data;
+    });
   };
   
   o.get = function(id) {

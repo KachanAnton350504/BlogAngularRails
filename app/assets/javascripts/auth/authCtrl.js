@@ -30,8 +30,6 @@ function($scope, $state, Auth, Flash){
       function(RESPONSE_ERROR) {
         $scope.errors = RESPONSE_ERROR.data.errors;
         $scope.show_error_messages = Object.keys( $scope.errors ).length;
-       
-
       });
   };
 
