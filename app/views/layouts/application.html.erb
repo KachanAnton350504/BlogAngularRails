@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog</title>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+   <%= csrf_meta_tags %>
+
+</head>
+       
+<!-- <style type="text/css">
+   body { 
+    background-image: url(images/home-bg.jpg); /* Путь к фоновому рисунку */
+    background-position: left top; /* Положение фона */
+    background-repeat: cover; /* Повторяем фон по горизонтали */
+    height: 100px;
+   }
+   .bb {
+    height: 1000px;
+   }
+  </style> -->
+
+ 
+
+
+<body ng-app="Blog">
+<header class="intro-header" style="background-image: url('images/home-bg.jpg')">
+
+<div ng-include="'nav/_nav.html'"></div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="site-heading">
+          <h2>Blog by Anton Kachan</h2>
+          <hr class="small">
+          <span class="subheading">For Monostek</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+ 
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <ui-view></ui-view>
+        </div>
+      </div>
+    </div>
+</article>
+  <!-- <div class="navbar-fixed-bottom row-fluid">
+    <div class="container">
+      <p class="text-muted">&copy; Itransition, Anton Kachan</p>
+    </div>
+  </div> -->
+
+
+</body>
+</html>

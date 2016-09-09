@@ -1,0 +1,6 @@
+<div class="alert alert-danger" id="errors_count" ng-show='show_error_messages'>
+      <button type="button" class="close" data-dismiss="alert">x</button>
+        <div ng-repeat="(key, value) in errors">
+          {{key}}: {{value.toString()}}
+        </div>
+    </div>

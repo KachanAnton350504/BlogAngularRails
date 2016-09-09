@@ -1,0 +1,40 @@
+
+    <div  ng-controller="NavCtrl">
+
+<nav class="navbar navbar-light" style="background-color: #e3faaa;">
+    <div class="container-fluid">
+        <a class="navbar-header navbar-brand" href="#/home">The Blog</a>
+      <ul class="nav navbar-nav">
+        <li><a href="#/home">Home</a></li>
+
+      </ul>
+       
+      <ul class="nav navbar-nav navbar-right">  
+          <li ng-show="signedIn()">
+          <a class="glyphicon glyphicon-user"href="#/">{{  user.email}}
+          </a>
+        </li>
+          <li ng-show="signedIn()">
+              
+              <a ng-click="logout()">Log Out
+                <span class="glyphicon glyphicon-log-out"></span>
+              </a>
+            </li>
+          
+          <li>
+            <li ng-hide="signedIn()"><a href="#/login">Log In
+              <span class="glyphicon glyphicon-log-in"></span>
+            </a></li>
+          </li>
+          
+          
+          <li>
+            <li ng-hide="signedIn()"><a href="#/register">Register
+            <span class="glyphicon glyphicon-user"></span>
+            </a></li>
+          </li>  
+
+      </ul>
+    </div>
+  </nav>
+</div>  

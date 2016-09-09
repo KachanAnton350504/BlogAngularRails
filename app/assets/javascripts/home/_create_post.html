@@ -1,0 +1,13 @@
+<form ng-show="signedIn()" ng-submit="addPost()">
+      <h3>Add a new post</h3>
+      <label>Title:</label>
+      <input type="text" class="form-control" placeholder="Title" ng-model="title"></input>
+      <div class="form-group">
+        <label ng-repeat="rubric in rubrics">
+          <input type="checkbox" checklist-model="rubric_ids" checklist-value="rubric.id"> {{rubric.name}}</input>
+        </label>
+        <textarea class="form-control" rows="5" ng-model="body"></textarea>
+      </div>
+        {{user.email}} 
+          <button type="submit" class="btn btn-primary">Post</button>
+    </form>

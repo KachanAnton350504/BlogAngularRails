@@ -1,0 +1,64 @@
+<div class="post-preview">
+  <a ng-show="post.title" href="#/posts/{{post.id}}">
+      <h2 class="post-title">
+         {{post.title}}
+      </h2>
+    </a>  
+      <div class="post-subtitle" ng-show="post.body"  ng-bind-html="trustAsHtml(post.body)">
+         {{trustAsHtml(post.body)}}
+      </div>
+  <div class="row">
+    
+    <p class="post-meta">Posted by <a ng-href="#/users/{{post.user.username}}">{{post.user.email}}</a> On {{post.created_at | date:format:mediumTime}}</p>
+    
+    <div class="col-md-10"></div>
+        <button href ng-click="showComments = !showComments">
+          <span class="glyphicon glyphicon-comment"></span>
+          <span class="badge" id="comment_count" ng-show="comments_count">{{comments_count}}</span>
+        </button>
+        </div>
+      </div>
+    <hr>
+    
+
+      
+        <div ng-show='showComments'>
+        <div ng-repeat="comment in post.comments">
+          <div id="comments" class="comments">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <p class="post-meta">Posted by <a ng-href="#/users/{{comment.user.email}}">{{comment.user.email}}</a> On {{comment.created_at | date:format:mediumTime}}</p>
+              </div>
+      
+              <div id="collapse1" class="panel-collapse collapse in">
+                <div class="panel-body">
+                  {{comment.body}}
+                </div>
+              </div>
+            </div>
+          </div>        
+        </div>
+        
+        <bgf-pagination url='comments_url' collection='post.comments' ></bgf-pagination>
+        
+
+              
+        <div id="notice" class="alert alert-success fade in" style="visibility: hidden;">
+        <button type="button" class="close" data-dismiss="alert">x</button>
+          {{alert}}
+        </div>
+        
+        <div id="create-comment" class="comment-create">
+          <form ng-show="signedIn()" ng-submit="addComment()" style="margin-top:30px;">
+            <h3>Add a new comment</h3>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Comment" ng-model="body"></input>
+            </div>
+            <button type="submit" class="btn btn-primary">Comment</button>
+          </form>
+        </div>
+      </div>
+      <div style="margin-bottom: 40px;" ng-hide="showComments"></div>
+    <!-- </div> -->
+    
+    <div ng-include="'layout/_rubrics_list.html'"></div>

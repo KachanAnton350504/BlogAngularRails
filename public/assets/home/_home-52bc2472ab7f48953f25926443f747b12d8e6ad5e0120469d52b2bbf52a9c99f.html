@@ -1,0 +1,35 @@
+<div id="notice" class="alert alert-success fade in" style="visibility: hidden;"></div>
+<div class="col-md-6">
+  <div ng-repeat="post in posts">
+    <h2><a ng-show="post.title" href="{{post.title}}">{{post.title}}</a></h2>
+    <p class="blog-post-meta">
+      {{post.created_at}} 
+      posted by <a ng-href="#/users/{{post.user.username}}">{{post.user.email}}</a>
+    </p>  
+    
+    <p class="post-body" ng-show="post.body">
+       {{post.body}}
+    </p>
+    
+    <div class="row">
+      <a class="col-md-10" href="#/posts/{{post.id}}">Show more</a>
+        
+      <a href="#/posts/{{post.id}}">
+        Comments
+        <span class="glyphicon glyphicon-comment"></span>
+      </a>  
+    </div>
+  </div>
+  <form ng-submit="addPost()">
+    <h3>Add a new post</h3>
+    
+    <input type="text" class="form-control" placeholder="Title" ng-model="title"></input>
+<div class="post-create">
+    
+    <input type="text" class='redactor field' placeholder="Body" ng-model="body"></input>
+    </div>
+    <button type="submit" class="btn btn-primary">Post</button>
+  </form>
+</div>
+</div>
+

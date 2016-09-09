@@ -1,0 +1,54 @@
+<div id="notice"  style="visibility: hidden;">{{alert}}</div>
+  <div class="col-md-6">
+    <div ng-repeat="post in posts">
+      <h2><a ng-show="post.title" href="#/posts/{{post.id}}">{{post.title}}</a></h2>
+      <p class="blog-post-meta">
+        {{post.created_at}} 
+        posted by <a ng-href="#/users/{{post.user.username}}">{{post.user.email}}</a>
+      </p>  
+      <div style="height: 200px; overflow: hidden;">
+  
+      <p style="text-overflow: ellipsis;" ng-show="post.body" ng-bind-html="trustAsHtml(post.body)">
+        {{trustAsHtml(post.body)}}
+         
+      </p>
+      </div>
+        <a href="#/posts/{{post.id}}">Show more
+          <span class="glyphicon glyphicon-eye-open"></span>
+        </a>
+          
+    </div>
+    
+    <bgf-pagination url='posts_url' collection='posts' ></bgf-pagination>
+   
+    <form ng-submit="addPost()">
+      <h3>Add a new post</h3>
+      <label>Title:</label>
+      <input type="text" class="form-control" placeholder="Title" ng-model="title"></input>
+      <label>Rubric:</label>
+      <label ng-repeat="rubric in rubrics">
+        <input type="checkbox" checklist-model="rubric_ids" checklist-value="rubric.id"> {{rubric.name}}</input>
+      </label>
+      
+      <input id="redactor" type="text" class='redactor' rows="40" cols="120" placeholder="Body" ng-model="body"></input>
+        {{user.email}} 
+          <button type="submit" class="btn btn-primary">Post</button>
+    </form>
+  </div>
+  $('#redactor').redactor({ options });
+  <div class="col-md-4 col-md-push-2">
+    <div class="well">
+      <h3>Rubrics:</h3>
+      <div class="widget">
+        <ul class='list-unstyled'>
+          <div ng-repeat="rubric in rubrics">
+            <h5><a style="margin-left: 40px" ng-href="#/rubrics/{{rubric.id}}">{{rubric.name}}</a></h5>
+          </div>
+    
+        </ul>
+      </div>
+      <hr>
+      <h3><a  href="#/home">Back to Blog Home</a></h3>
+
+    </div>
+  </div>
