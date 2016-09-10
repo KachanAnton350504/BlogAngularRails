@@ -1,6 +1,6 @@
 class RubricsController < ApplicationController
-  #load_and_authorize_resource
-  
+ # authorize_resource
+  skip_before_filter :authenticate_user!
   def index
     respond_with Rubric.all
   end

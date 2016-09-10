@@ -1,7 +1,6 @@
 class CommentsController < ApplicationController
   before_action :set_post, only: [:show]
-  
-  #before_filter :authenticate_user!, only: [:create, :update]
+  skip_before_filter :authenticate_user!
   authorize_resource
   rescue_from CanCan::AccessDenied do |exception|
       p exception.message
@@ -16,11 +15,9 @@ class CommentsController < ApplicationController
 
   def create
     post = Post.find(params[:post_id])
-    p '32222222222'
     comment = Comment.new(comment_params.merge(user_id: current_user.id))
     p comment
     if comment.save
-      p '32'
       comment.post = post
       respond_with comment
     else

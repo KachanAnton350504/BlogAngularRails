@@ -16,11 +16,6 @@ function($scope, posts, $sce, $state, $timeout, Auth, Flash, limitToFilter){
   
   $scope.limit = 200;
   
-  // posts.getAll().then(function(posts){
-  //   console.log(posts.data)
-  //   $scope.posts = posts.data; 
-  // });
-
   posts.getRubrics().then(function(rubrics) {
     $scope.rubrics = rubrics.data;
   });

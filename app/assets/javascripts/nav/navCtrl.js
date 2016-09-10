@@ -24,6 +24,7 @@ angular.module('Blog')
          $scope.user = user;
        }, 
        function(error) {
+        console.log(error)
         }
        );
 
