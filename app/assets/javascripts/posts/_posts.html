@@ -47,18 +47,25 @@
         <button type="button" class="close" data-dismiss="alert">x</button>
           {{alert}}
         </div>
-        
-        <div id="create-comment" class="comment-create">
-          <form ng-show="signedIn()" ng-submit="addComment()" style="margin-top:30px;">
+
+    <div ng-include="'auth/_errors.html'"></div>
+
+    <!--     <div class="alert alert-danger" id="errors_count" ng-show='show_error_messages'>
+      <button type="button" class="close" data-dismiss="alert">x</button>
+              {{errors}}
+    </div>
+ -->        <div id="create-comment" class="comment-create">
+          <form ng-submit="addComment()" style="margin-top:30px;">
             <h3>Add a new comment</h3>
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Comment" ng-model="body"></input>
             </div>
+
             <button type="submit" class="btn btn-primary">Comment</button>
           </form>
         </div>
       </div>
-      <div style="margin-bottom: 40px;" ng-hide="showComments"></div>
+      <div style="margin-bottom: 60px;" ng-hide="showComments"></div>
     <!-- </div> -->
     
     <div ng-include="'layout/_rubrics_list.html'"></div>

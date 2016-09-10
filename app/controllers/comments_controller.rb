@@ -1,8 +1,12 @@
 class CommentsController < ApplicationController
   before_action :set_post, only: [:show]
- # before_filter :authenticate_user!, only: [:create, :update]
-  #load_and_authorize_resource
   
+  #before_filter :authenticate_user!, only: [:create, :update]
+  authorize_resource
+  rescue_from CanCan::AccessDenied do |exception|
+      p exception.message
+      render json: { error: {"Authorization": exception.message} }
+  end
   def show
     max_per_page = 2
     paginate @post.comments.count, max_per_page do |limit, offset|
@@ -12,8 +16,17 @@ class CommentsController < ApplicationController
 
   def create
     post = Post.find(params[:post_id])
-    comment = post.comments.create(comment_params.merge(user_id: current_user.id))
-    respond_with comment
+    p '32222222222'
+    comment = Comment.new(comment_params.merge(user_id: current_user.id))
+    p comment
+    if comment.save
+      p '32'
+      comment.post = post
+      respond_with comment
+    else
+      p comment.errors
+      render json: {"error": comment.errors }
+    end
   end
 
 
@@ -24,6 +37,6 @@ class CommentsController < ApplicationController
     end
 
     def comment_params
-      params.require(:comment).permit(:body)
+      params.require(:comment).permit(:body, :user_id)
     end
 end

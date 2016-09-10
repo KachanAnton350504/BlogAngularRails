@@ -32,12 +32,15 @@ function($scope, posts, $sce, $state, $timeout, Auth, Flash, limitToFilter){
       rubric_ids: $scope.rubric_ids,
       body: $scope.body,
     }).then(function (errors) {
+          console.log(errors)
           if(errors.id){
             $scope.alert = 'The Post was successfully created.';
+          
             $timeout(function () {
               $state.go('home');
           }, 2000);
-          } else {
+          } 
+          else {    
             $scope.errors = errors
             $scope.show_error_messages = Object.keys( errors ).length;
           }

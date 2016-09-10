@@ -1,7 +1,10 @@
 class PostsController < ApplicationController
- # load_and_authorize_resource
- # before_filter :authenticate_user!, only: [:create, :update]
+  authorize_resource
+  rescue_from CanCan::AccessDenied do |exception|
+      render json: { error: exception.message }
+  end
 
+  
   def index
     max_per_page = 2
     paginate Post.order("created_at DESC").count, max_per_page do |limit, offset|
@@ -39,7 +42,7 @@ class PostsController < ApplicationController
   end
 
   private
-    
+     
     def post_params
       params.require(:post).permit(:title, :body, :user_id)
     end

@@ -6,6 +6,7 @@ angular.module('Blog')
 'Flash',
 function($scope, $state, Auth, Flash){
 
+  $scope.message = "Registration"
   $scope.login = function() {
      Auth.login($scope.user).then(
       $scope.successAlert = function () {
@@ -21,6 +22,9 @@ function($scope, $state, Auth, Flash){
 
 
   $scope.register = function() {
+    if($scope.user){
+      $scope.user.role = "user"
+    }
     Auth.register($scope.user).then(
       $scope.successAlert = function(){
         var message = 'Sign up  successfully';
