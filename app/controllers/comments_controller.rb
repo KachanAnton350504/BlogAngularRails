@@ -16,12 +16,11 @@ class CommentsController < ApplicationController
   def create
     post = Post.find(params[:post_id])
     comment = Comment.new(comment_params.merge(user_id: current_user.id))
-    p comment
+    comment.post = post
+    
     if comment.save
-      comment.post = post
-      respond_with comment
+      render json: comment
     else
-      p comment.errors
       render json: {"error": comment.errors }
     end
   end

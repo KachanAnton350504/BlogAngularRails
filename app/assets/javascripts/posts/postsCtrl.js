@@ -6,7 +6,7 @@ angular.module('Blog')
 '$sce',
 'Auth',
 function($scope, posts, $stateParams, $sce, Auth){
-  $scope.comments_url = '/comments/' +$stateParams.id; 
+ $scope.comments_url = '/comments/' +$stateParams.id; 
     $scope.signedIn = Auth.isAuthenticated;
   
 

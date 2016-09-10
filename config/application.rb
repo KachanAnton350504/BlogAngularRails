@@ -19,13 +19,9 @@ config.to_prepare do
   Devise::SessionsController.skip_before_filter :authenticate_user!
 end
 
-    # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
-    # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    # config.i18n.default_locale = :de
-    # config.to_prepare do
-    #   DeviseController.respond_to :html, :json
-    # end
-    # # Do not swallow errors in after_commit/after_rollback callbacks.
+    config.paths.add File.join('app', 'api'), glob: File.join('**', '*.rb')
+config.autoload_paths += Dir[Rails.root.join('app', 'api', '*')]
+
     config.assets.paths << "#{Rails}/vendor/assets/fonts"
     config.active_record.raise_in_transactional_callbacks = true
   end

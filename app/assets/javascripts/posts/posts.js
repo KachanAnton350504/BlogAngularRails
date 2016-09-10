@@ -19,8 +19,9 @@ function($http){
   };
   
   o.addPost = function(post) {
-    
-    return $http.post('/posts.json', post).then(function(result){
+    console.log(post)
+    return $http.post('/posts', post).then(function(result){
+      
       return result.data;
     });
   };
@@ -31,7 +32,7 @@ function($http){
     });
   };
   o.addComment = function(id, comment) {
-    return $http.post('/posts/' + id + '/comments.json', comment);
+    return $http.post('/posts/' + id + '/comments', comment);
   };
   
   return o; 

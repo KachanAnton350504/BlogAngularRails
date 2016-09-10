@@ -35,7 +35,7 @@ skip_before_filter :authenticate_user!
     post = Post.new(post_params.merge(user_id: current_user.id))
     post.rubrics << rubrics
     if post.save
-      respond_with post
+      render json: post
     else
       render json: post.errors
     end 

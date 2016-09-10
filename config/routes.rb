@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     resources :comments, only: [:show, :create] 
   end
   
+ # mount Blog::API => '/'
 
   resources :rubrics, defaults: {format: 'json'}
   get "rubrics/name/:id", to: "rubrics#name", defaults: {format: 'json'}

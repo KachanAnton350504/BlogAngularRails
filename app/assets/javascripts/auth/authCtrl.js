@@ -17,6 +17,7 @@ function($scope, $state, Auth, Flash){
        function(error) {
             var message = error.data.error;
             $scope.id = Flash.create('danger', message);
+            window.scrollTo(0, 0);
           });
     };
 
