@@ -3,7 +3,6 @@ class PostsController < ApplicationController
   rescue_from CanCan::AccessDenied do |exception|
       render json: { error: exception.message }
   end
-  skip_before_filter :authenticate_user!
   
   def index
     max_per_page = 2

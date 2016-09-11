@@ -7,13 +7,13 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 10.times do |i|
-  rubric = Rubric.create(name: "Rubric ##{i}")
-  user = User.create(email: "user#{i}@mail.ru", password: '12345678')
+  rubric = Rubric.create(name: "Rubric №#{i+1}")
+  user = User.create(email: "test_#{i+1}@mail.ru", password: '123456', role: 'user')
 
 3.times do |j|  
-  post = Post.create(title: "Post#{i}.#{j}", body: "<p>
-    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut mi arcu. Sed eu mi a mi ultrices viverra. Mauris ut auctor justo. Aenean iaculis fermentum risus non tristique. Duis hendrerit, elit et feugiat posuere, diam magna rutrum nisl, ac iaculis enim sem quis ex. Maecenas in urna dapibus, volutpat libero vel, blandit dui. Vestibulum leo arcu, gravida dictum sagittis id, laoreet ac est. Maecenas semper turpis et diam fermentum dictum. Nam eu odio nec risus facilisis elementum. Vivamus facilisis tempus ex pulvinar convallis. Pellentesque sed neque quis nibh pretium tempus.
-    </h2></p>
+  post = Post.create(title: "Post №#{j+1} of rubric №#{i+1}", body: "
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut mi arcu. Sed eu mi a mi ultrices viverra. Mauris ut auctor justo. Aenean iaculis fermentum risus non tristique. Duis hendrerit, elit et feugiat posuere, diam magna rutrum nisl, ac iaculis enim sem quis ex. Maecenas in urna dapibus, volutpat libero vel, blandit dui. Vestibulum leo arcu, gravida dictum sagittis id, laoreet ac est. Maecenas semper turpis et diam fermentum dictum. Nam eu odio nec risus facilisis elementum. Vivamus facilisis tempus ex pulvinar convallis. Pellentesque sed neque quis nibh pretium tempus.
+
     <hr>
     <p>
     <br>Fusce euismod feugiat ex, placerat commodo lorem tincidunt sed. Donec consectetur metus in eros cursus imperdiet. Nam laoreet varius leo non ornare. Suspendisse at sapien porta, blandit felis vel, interdum dui. Curabitur eget nulla ultricies, ornare elit ut, tincidunt ex. Aliquam sit amet odio finibus, aliquet sem ut, consectetur augue. Morbi pharetra tempus massa, vel sagittis massa euismod non. Donec quis est finibus mi pellentesque facilisis. Ut suscipit molestie tellus at fringilla. Integer vitae pulvinar sem, non sodales lacus. Nunc suscipit dui vel nibh scelerisque ultricies. Vestibulum non ullamcorper sem. Etiam non leo non lorem pharetra pellentesque id tempor orci. Nulla facilisis a sem eget auctor.
@@ -30,7 +30,7 @@
   user.posts << post;
   rubric.posts << post
   10.times do |k| 
-    comment = Comment.create(body: "#{i}.#{j}.#{k} This is good post!!!")
+    comment = Comment.create(body: "Rubric №#{i+1}.Post №#{j+1}. Comment №#{k+1} This is good post!!!")
     user.comments << comment
     post.comments << comment
   end  

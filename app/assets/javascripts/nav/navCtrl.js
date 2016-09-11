@@ -15,7 +15,7 @@ angular.module('Blog')
       Auth.logout().then(
       $scope.successAlert = function (err) {
         var message = 'Signed out successfully';
-        $scope.id = Flash.create('success', message);
+        $scope.id = Flash.create('danger', message);
       },
       function() {});
     };
@@ -24,7 +24,6 @@ angular.module('Blog')
          $scope.user = user;
        }, 
        function(error) {
-        console.log(error)
         }
        );
 

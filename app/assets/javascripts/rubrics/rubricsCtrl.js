@@ -19,7 +19,6 @@ function($scope, posts, rubrics, $stateParams, $sce, Auth){
   //  });
 
   posts.getAll().then(function(posts) {
-   console.log(posts);
    $scope.posts = posts.data;
    });
 

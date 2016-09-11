@@ -28,14 +28,12 @@ function($scope, posts, $stateParams, $sce, Auth){
       post_id: $scope.post.id
     }).success(function(comment) {
       if(!comment.error) {
-        console.log(comment)
         $scope.alert = 'The Comment was successfully created.';
         $scope.post.comments.push(comment);
         $scope.comments_count += 1;
         $("#notice").css('visibility','visible');
       }
       else {
-        console.log(comment)
 
          $scope.errors = comment.error
          $scope.show_error_messages = Object.keys( comment.error ).length;        

@@ -2,7 +2,6 @@ class ApplicationController < ActionController::Base
   include CleanPagination
 	respond_to :json
   before_action :configure_permitted_parameters, if: :devise_controller?
-  #skip_before_filter :authenticate_user!
 
 	def angular
   end
