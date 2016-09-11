@@ -13,6 +13,12 @@ module ControllerMacros
     end
   end
 
+  def create_rubric
+    before(:each) do
+      rubric =  FactoryGirl.create(:rubric)
+      rubric
+    end
+  end
 
   def login_user
     before(:each) do

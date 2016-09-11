@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.describe CommentsController, type: :controller do
   login_guest
+  create_rubric
   create_post
-
   let(:json) { JSON.parse(response.body) }
 
   describe "GET #show" do
