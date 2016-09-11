@@ -18,6 +18,7 @@ FactoryGirl.define do
         title "TestPost"
         body "test test test"
         user_id  "2"
+        rubric_ids "1"
     end
 
     factory :comment do

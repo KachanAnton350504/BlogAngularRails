@@ -3,7 +3,6 @@ require 'rails_helper'
 
 RSpec.describe PostsController, type: :controller do
   login_guest
-  render_views
 
   let(:json) { JSON.parse(response.body) }
   let(:posts) { FactoryGirl.build_list(:post, 10) }
