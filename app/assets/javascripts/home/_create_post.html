@@ -6,15 +6,15 @@
     <div ng-include="'auth/_errors.html'"></div>
 
  
-<form ng-submit="addPost()">
+<form ng-submit="addPost()" ng-model="post">
       <h3>Add a new post</h3>
       <label>Title:</label>
-      <input type="text" class="form-control" placeholder="Title" ng-model="post.title"></input>
+      <input type="text" class="form-control" placeholder="Title" ng-model="title"></input>
       <div class="form-group">
         <label ng-repeat="rubric in rubrics">
-          <input type="checkbox" checklist-model="post.rubric_ids" ng-model="post.rubric_ids" checklist-value="rubric.id"> {{rubric.name}}</input>
+          <input type="checkbox" checklist-model="rubric_ids" ng-model="rubric_ids" checklist-value="rubric.id"> {{rubric.name}}</input>
         </label>
-        <textarea class="form-control" rows="5" ng-model="post.body"></textarea>
+        <textarea class="form-control" rows="5" ng-model="body"></textarea>
       </div>
         {{user.email}} 
           <button type="submit" class="btn btn-primary">Post</button>

@@ -19,7 +19,6 @@ function($http){
   };
   
   o.addPost = function(post) {
-    console.log(post)
     return $http.post('/posts', post).then(function(result){
       
       return result.data;

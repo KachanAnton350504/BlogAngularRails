@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   rescue_from CanCan::AccessDenied do |exception|
       render json: { error: exception.message }
   end
-skip_before_filter :authenticate_user!
+  skip_before_filter :authenticate_user!
   
   def index
     max_per_page = 2
@@ -16,22 +16,21 @@ skip_before_filter :authenticate_user!
     render json: Post.find(params[:id])
   end
 
+
+
   def create
     rubrics = []
-    unless params[:body]&&params[:title]
-      p = Post.create(title:params[:title],body:params[:body])
+    rubric_ids = post_params[:rubric_ids]
+    unless post_params[:body]&&post_params[:title]
+      p = Post.create(post_params)
       render json: p.errors
       return;
     end
-    unless params[:rubric_ids]
+    unless rubric_ids
       render json: Rubric.create().errors
       return;
     end
-    if params[:rubric_ids].size < 2
-      rubrics.push(Rubric.find(params[:rubric_ids]))
-    else
-      params[:rubric_ids].each {|id| rubrics.push(Rubric.find(id)) } 
-    end
+    rubric_ids.each {|id| rubrics.push(Rubric.find(id)) } 
     post = Post.new(post_params.merge(user_id: current_user.id))
     post.rubrics << rubrics
     if post.save
@@ -44,6 +43,6 @@ skip_before_filter :authenticate_user!
   private
      
     def post_params
-      params.require(:post).permit(:title, :body, :user_id)
+      params.fetch(:post, {}).permit(:title, :body, :rubric_ids => [])
     end
 end

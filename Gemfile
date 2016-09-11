@@ -60,6 +60,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'rspec-rails', '~> 3.5'
   gem 'byebug'
+  gem "factory_girl_rails", "~> 4.0", :require => false
 end
 
 group :development do

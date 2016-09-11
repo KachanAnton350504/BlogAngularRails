@@ -18,10 +18,10 @@ function($scope, posts, rubrics, $stateParams, $sce, Auth){
   //  $scope.rubrics = rubrics.data;
   //  });
 
-  // posts.getAll().then(function(posts) {
-  //  console.log(posts.data);
-  //  $scope.posts = posts.data;
-  //  });
+  posts.getAll().then(function(posts) {
+   console.log(posts);
+   $scope.posts = posts.data;
+   });
 
   // $scope.trustAsHtml = $sce.trustAsHtml;
   // $scope.id = [];

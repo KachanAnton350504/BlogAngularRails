@@ -20,10 +20,13 @@ function($scope, posts, $sce, $state, $timeout, Auth, Flash, limitToFilter){
     $scope.rubrics = rubrics.data;
   });
 
-  //$scope.rubric_ids = [];
+  $scope.rubric_ids = [];
   $scope.addPost = function(){
-   posts.addPost($scope.post).then(function (errors) {
-          console.log(errors.data)
+   posts.addPost({post: {
+      title: $scope.title,
+      body: $scope.body,
+      rubric_ids: $scope.rubric_ids
+    }}).then(function (errors) {
           if(errors.id){
             $scope.alert = 'The Post was successfully created.';
           
@@ -31,9 +34,7 @@ function($scope, posts, $sce, $state, $timeout, Auth, Flash, limitToFilter){
               $state.go('home');
           }, 2000);
           } 
-          else { 
-          console.log(errors)
-
+          else {             
             $scope.errors = errors
             $scope.show_error_messages = Object.keys( errors ).length;
           }
