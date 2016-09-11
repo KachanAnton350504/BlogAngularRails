@@ -20,6 +20,12 @@ FactoryGirl.define do
         user_id  "2"
     end
 
+    factory :comment do
+        body "TestBody"
+        post_id "1"
+        user_id "1"
+    end
+
     factory :rubric do
         name "TestRubric"
     end

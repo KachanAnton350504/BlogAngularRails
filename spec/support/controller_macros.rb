@@ -6,7 +6,7 @@ module ControllerMacros
   #   end
   # end
 
-  def post
+  def create_post
     before(:each) do
       post =  FactoryGirl.create(:post)
       post

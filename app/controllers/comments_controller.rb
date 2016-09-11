@@ -3,8 +3,7 @@ class CommentsController < ApplicationController
   skip_before_filter :authenticate_user!
   authorize_resource
   rescue_from CanCan::AccessDenied do |exception|
-      p exception.message
-      render json: { error: {"Authorization": exception.message} }
+      render json: { error: {"authorization": exception.message} }
   end
   def show
     max_per_page = 2
@@ -14,7 +13,7 @@ class CommentsController < ApplicationController
   end
 
   def create
-    post = Post.find(params[:post_id])
+    post = Post.find(comment_params[:post_id])
     comment = Comment.new(comment_params.merge(user_id: current_user.id))
     comment.post = post
     
@@ -33,6 +32,6 @@ class CommentsController < ApplicationController
     end
 
     def comment_params
-      params.require(:comment).permit(:body, :user_id)
+      params.require(:comment).permit(:body, :user_id, :post_id)
     end
 end

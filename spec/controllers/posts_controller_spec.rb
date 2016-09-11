@@ -1,5 +1,6 @@
 require 'rails_helper'
-require 'pp'
+
+
 RSpec.describe PostsController, type: :controller do
   login_guest
   render_views
