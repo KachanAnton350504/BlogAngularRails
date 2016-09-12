@@ -22,7 +22,7 @@ end
     config.paths.add File.join('app', 'api'), glob: File.join('**', '*.rb')
 config.autoload_paths += Dir[Rails.root.join('app', 'api', '*')]
 
-    config.assets.paths << "#{Rails}/vendor/assets/fonts"
+  #  config.assets.paths << "#{Rails}/vendor/assets/fonts"
     config.active_record.raise_in_transactional_callbacks = true
   end
 end
