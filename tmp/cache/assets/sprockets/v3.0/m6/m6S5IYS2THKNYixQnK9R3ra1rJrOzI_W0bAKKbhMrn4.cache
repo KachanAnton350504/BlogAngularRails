@@ -1,16 +1,0 @@
-{:uriI"ƒfile://app/assets/javascripts/home/_home.html?type=text/ng-html&id=57dc5ebdfd656e6a5c5452189caf21b9968e2bd79dcefbbc3790de7a622b23bd:ET:load_pathI"app/assets/javascripts;T:filenameI"+app/assets/javascripts/home/_home.html;T:	nameI"home/_home;T:logical_pathI"home/_home.html;T:content_typeI"text/ng-html;T:sourceI"s<div id="notice" class="alert alert-success fade in" style="visibility: hidden;">
-        <button type="button" class="close" data-dismiss="alert">x</button>
-          {{alert}}
-        </div>
-  <!-- <div class="col-md-6 center"> -->
-    <div ng-include="'layout/_posts.html'"></div>
-    
-    
-  <!-- </div>  -->
-
-  <div ng-include="'layout/_rubrics_list.html'"></div>
-  ;T:metadata{	:dependencieso:Set:
-@hash}
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"9file-digest://app/assets/javascripts/home/_home.html;TTF:charsetI"
-utf-8;F:digest"%WSr‹£:ñæúğ…®øõ5Ñ‡ë#Wã…0–ÿé²:lengthis:dependencies_digest"%f¥ÆG÷† é4­ûâÉ¹EĞxÌƒàFıÌ•:idI"E57dc5ebdfd656e6a5c5452189caf21b9968e2bd79dcefbbc3790de7a622b23bd;F:
-mtimel+3)×W

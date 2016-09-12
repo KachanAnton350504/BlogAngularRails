@@ -1,29 +1,0 @@
-{:uriI"†file://app/assets/javascripts/layout/_posts.html?type=text/ng-html&id=93efeaedb475a8b0b75da8e60da9c7466ed646dfe17c49c830693bc605856d04:ET:load_pathI"app/assets/javascripts;T:filenameI".app/assets/javascripts/layout/_posts.html;T:	nameI"layout/_posts;T:logical_pathI"layout/_posts.html;T:content_typeI"text/ng-html;T:sourceI"ž<div ng-repeat="post in posts">
-  <div class="post-preview">
-    <a ng-show="post.title" href="#/posts/{{post.id}}">
-        <h2 class="post-title">
-           {{post.title}}
-        </h2>
-    </a>
-        <h3 class="post-subtitle-cut" ng-show="post.body">
-            {{post.body}}
-        </h3>
-    
-    <p class="post-meta">Posted by <a ng-href="#/users/{{post.user.username}}">{{post.user.email}}</a> On {{post.created_at | date:format:mediumTime}}</p>
-  </div>
-  <hr>
-  <ul class="pager">
-    <li class="next">
-        <a href="#/posts/{{post.id}}">Show more &rarr;</a>
-    </li>
-</ul>
-</div>
-<bgf-pagination url='posts_url' collection='posts' ></bgf-pagination>
-
-
-;T:metadata{	:dependencieso:Set:
-@hash}
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"<file-digest://app/assets/javascripts/layout/_posts.html;TTF:charsetI"
-utf-8;F:digest"%ºÔ,¤ÎæôóÀu¦Ô3`þt½x‚K…¸`W$
-:lengthiž:dependencies_digest"%¡-GOÀ.¸/ÞBW‰µñSF=œ¿ñQG¢ÅÚ®:idI"E93efeaedb475a8b0b75da8e60da9c7466ed646dfe17c49c830693bc605856d04;F:
-mtimel+3)×W

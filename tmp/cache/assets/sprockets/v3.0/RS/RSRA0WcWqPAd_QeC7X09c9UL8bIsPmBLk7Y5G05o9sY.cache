@@ -1,34 +1,0 @@
-{:uriI"„file://app/assets/javascripts/auth/_login.html?type=text/ng-html&id=d8b2ce09d7425cf9c20e225836948569428417423055baf86bb5db497efd10e8:ET:load_pathI"app/assets/javascripts;T:filenameI",app/assets/javascripts/auth/_login.html;T:	nameI"auth/_login;T:logical_pathI"auth/_login.html;T:content_typeI"text/ng-html;T:sourceI"æ<div class="row centered-form">
-<div class=" col-md-6 col-sm-offset-4 col-md-offset-3">
-<div class="panel panel-default">
-<div class="panel-heading">
-  <h3 class="panel-title ">Log in</h3>
-</div>
-
-<div class="panel-body">
-
-	<form ng-submit="login()">
-    <!-- <div ng-include="'auth/_errors.html'"></div> -->
-	
-	  <div class="form-group">
-
-	    <input type="email" class="form-control" autofocus="true" placeholder="Email" ng-model="user.email">	
-	  </div>
-	  
-	  <div class="form-group">
-	    <input type="password" class="form-control input-sm" placeholder="Password" ng-model="user.password">
-	  </div>
-	  
-	  <div class="actions">
-	  	<input type="submit" class="btn btn-info btn-block" value="Sign in">
-		</div>
-	</form>
-</div>
-</div>
-
-
-;T:metadata{	:dependencieso:Set:
-@hash}
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI":file-digest://app/assets/javascripts/auth/_login.html;TTF:charsetI"
-utf-8;F:digest"%`52½™AkJw°èÔRÙ"˜œõ4Ï•‘ˆ¹0:lengthiæ:dependencies_digest"%FŞûå¹ú4‰mY¸~È‹f÷ÕÎxCpÍ×Ğé:idI"Ed8b2ce09d7425cf9c20e225836948569428417423055baf86bb5db497efd10e8;F:
-mtimel+3)×W
