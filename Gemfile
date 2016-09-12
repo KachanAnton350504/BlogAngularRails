@@ -58,10 +58,11 @@ gem 'grape-kaminari'
 # gem 'capistrano-rails', group: :development
 group :production do
 	gem 'rails_12factor'
+  gem 'pg'
+	
 	end
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'pg'
   gem 'rspec-rails', '~> 3.5'
   gem 'byebug'
   gem "factory_girl_rails", "~> 4.0", :require => false
