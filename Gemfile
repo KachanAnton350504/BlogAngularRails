@@ -48,7 +48,7 @@ gem 'grape-cancan'
 gem 'grape-kaminari'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'font-awesome-sass', '~> 4.5.0'
 # Use Unicorn as the app server
 # gem 'unicorn'
 	

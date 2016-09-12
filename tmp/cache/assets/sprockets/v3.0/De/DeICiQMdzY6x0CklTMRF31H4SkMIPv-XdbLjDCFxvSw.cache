@@ -1,0 +1,25 @@
+{:uriI"Šfile://app/assets/javascripts/home/_create_post.html?type=text/ng-html&id=0b753afe4ac1faa0576e73529591dda7e344524c951772be30ed0ce50fc646ba:ET:load_pathI"app/assets/javascripts;T:filenameI"2app/assets/javascripts/home/_create_post.html;T:	nameI"home/_create_post;T:logical_pathI"home/_create_post.html;T:content_typeI"text/ng-html;T:sourceI"G<div id="success" class="alert alert-success"  ng-show='alert'>
+      <button type="button" class="close" data-dismiss="alert">x</button>
+       {{alert}}
+    </div>
+
+    <div ng-include="'auth/_errors.html'"></div>
+
+ 
+<form ng-submit="addPost()" ng-model="post">
+      <h3>Add a new post</h3>
+      <label>Title:</label>
+      <input type="text" class="form-control" placeholder="Title" ng-model="title"></input>
+      <div class="form-group">
+        <label ng-repeat="rubric in rubrics">
+          <input type="checkbox" checklist-model="rubric_ids" ng-model="rubric_ids" checklist-value="rubric.id"> {{rubric.name}}</input>
+        </label>
+        <textarea class="form-control" rows="5" ng-model="body"></textarea>
+      </div>
+        {{user.email}} 
+          <button type="submit" class="btn btn-primary">Post</button>
+    </form>;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"@file-digest://app/assets/javascripts/home/_create_post.html;TTF:charsetI"
+utf-8;F:digest"%éƒœU¦‘6£Œ;ú»•B†ì;f‹¸^.1dTk. :lengthiG:dependencies_digest"%G|ÊÉ¾–]9ƒO,Î5'Ÿ°ßh®Ç?ák@fg@ØY¡:idI"E0b753afe4ac1faa0576e73529591dda7e344524c951772be30ed0ce50fc646ba;F:
+mtimel+3)×W

@@ -1,0 +1,37 @@
+
+<div class="row centered-form">
+<div class="col-md-6 col-sm-offset-4 col-md-offset-3">
+<div class="panel panel-default">
+<div class="panel-heading">
+  <h3 class="panel-title ">Sign up</h3>
+</div>
+
+<div class="panel-body">
+	<form ng-submit="register()">
+    <div ng-include="'auth/_errors.html'"></div>
+		
+    <div class="form-group">
+		  <input type="email" class="form-control" placeholder="Email Adress" ng-model="user.email">
+		</div>
+
+		<div class="row">
+      <div class="col-xs-6 col-sm-6 col-md-6">
+        <div class="form-group">
+		      <input type="password" class="form-control input-sm" placeholder="Password" ng-model="user.password">
+		    </div>
+		  </div>
+
+		  <div class="col-xs-6 col-sm-6 col-md-6">
+        <div class="form-group">
+		      <input required type="password" class="form-control input-sm" placeholder="Confirm Password" ng-model="user.password_confirmation">
+        </div>
+      </div>
+    </div>
+<input type="hidden"  value="user" ng-model="user.role">
+    <div class="actions">
+      <input type="submit" class="btn btn-info btn-block" value="Register">
+    </div>
+    
+</form>
+</div>
+</div></div></div>
