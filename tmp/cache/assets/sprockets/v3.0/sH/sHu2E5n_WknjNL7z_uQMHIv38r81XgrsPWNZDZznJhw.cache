@@ -1,0 +1,10 @@
+{:uriI"‰file://app/assets/javascripts/rubrics/_rubrics.html?type=text/ng-html&id=389a02971f39f410e0acf238cd56b41bdbf72085b472d9f00d2fce4f58e7ba33:ET:load_pathI"app/assets/javascripts;T:filenameI"1app/assets/javascripts/rubrics/_rubrics.html;T:	nameI"rubrics/_rubrics;T:logical_pathI"rubrics/_rubrics.html;T:content_typeI"text/ng-html;T:sourceI"x    <h1 class="text-center">{{rubric_name}}</h1>
+    <br>
+    <div ng-include="'layout/_posts.html'"></div>
+   
+
+  ;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"?file-digest://app/assets/javascripts/rubrics/_rubrics.html;TTF:charsetI"
+utf-8;F:digest"%úLE¡€. òÀ¶ŒGïûIøÚú.pºy4õB$$:lengthix:dependencies_digest"%òKfÕFB™ÿÇc‘>b+ ´›*âô«Ë¦B»f‡º{:idI"E389a02971f39f410e0acf238cd56b41bdbf72085b472d9f00d2fce4f58e7ba33;F:
+mtimel+3)×W

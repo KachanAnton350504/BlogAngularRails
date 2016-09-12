@@ -1,0 +1,56 @@
+{:uriI"file://app/assets/javascripts/nav/_nav.html?type=text/ng-html&id=61ec417f5e9f969cf71e64fa5a548ac82ca16f028e636f49f0ccc477a96b923f:ET:load_pathI"app/assets/javascripts;T:filenameI")app/assets/javascripts/nav/_nav.html;T:	nameI"nav/_nav;T:logical_pathI"nav/_nav.html;T:content_typeI"text/ng-html;T:sourceI"W<div  ng-controller="NavCtrl">
+<div class="navbar navbar-default ">
+  <div class="container">
+    <a class="navbar-header navbar-brand" href="#/home">The Blog</a>
+    <div class="navbar-collapse collapse navbar-responsive-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="#/home">Home</a></li>
+        <li><a href="#/home/create">Create Post</a></li>
+        <li class="nav-item dropdown-toggle">
+                            <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">Rubrics  <span class="caret"></span></a>
+                           
+                            <ul class="dropdown-menu" >
+                              <li ng-repeat="rubric in rubrics">
+                              <a ng-href="#/rubrics/{{rubric.id}}">{{rubric.name}}</a></li>
+                            </ul>                            
+                        </li><!--//dropdown--> 
+      </ul>
+       
+      <ul class="nav navbar-nav navbar-right">  
+        <li ng-show="signedIn()">
+          <a  href="#/">{{user.email}}
+            <span class="glyphicon glyphicon-user"></span>
+          </a>
+        </li>
+        <li ng-show="signedIn()">      
+          <a href="#/home" ng-click="logout()">Log Out
+            <span class="glyphicon glyphicon-log-out"></span>
+          </a>
+        </li>
+          
+        <li>
+          <li ng-hide="signedIn()">
+            <a href="#/login">Log In<span class="glyphicon glyphicon-log-in"></span>
+              </a>
+          </li>
+        </li>
+          
+          
+        <li>
+          <li ng-hide="signedIn()"><a href="#/register">Register
+          <span class="glyphicon glyphicon-user"></span>
+          </a></li>
+        </li>  
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+<flash-message>
+    <!-- <div class="my-flash"></div> -->
+</flash-message>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"7file-digest://app/assets/javascripts/nav/_nav.html;TTF:charsetI"
+utf-8;F:digest"%uç=j’òJ.Ñ™œq›:¥|{n\÷Ñ­ô‡íş£¼:lengthiW:dependencies_digest"%±"÷pù]{6ùÇ¸¼Tıİg4£•¾4Æø­:idI"E61ec417f5e9f969cf71e64fa5a548ac82ca16f028e636f49f0ccc477a96b923f;F:
+mtimel+3)×W

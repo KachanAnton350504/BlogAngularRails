@@ -1,0 +1,18 @@
+{:uriI"file://app/assets/javascripts/layout/_rubrics_list.html?type=text/ng-html&id=566bcf5c763a731d5966b22da29dae0906cf5ddaadfd394e95a614301ca849d0:ET:load_pathI"app/assets/javascripts;T:filenameI"5app/assets/javascripts/layout/_rubrics_list.html;T:	nameI"layout/_rubrics_list;T:logical_pathI"layout/_rubrics_list.html;T:content_typeI"text/ng-html;T:sourceI"˜<!-- <div class="col-md-5 col-md-push-2">
+  <div class="well">
+    <h3>Rubrics:</h3>
+    <div class="widget">
+      <ul class='list-unstyled'>
+        <div ng-repeat="rubric in rubrics">
+          <h5><a style="margin-left: 40px" ng-href="#/rubrics/{{rubric.id}}">{{rubric.name}}</a></h5>
+        </div>
+      </ul>
+    </div>
+    <hr>
+    <h3><a  href="#/home">Back to Blog Home</a></h3>
+  </div>
+</div> -->;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Cfile-digest://app/assets/javascripts/layout/_rubrics_list.html;TTF:charsetI"
+utf-8;F:digest"%bê¶Ø«4¾†¤¿.3­ªÃwôäÁÊÅ“(|1r8ü{:lengthi˜:dependencies_digest"%Í½îK&·¦h™‚É‡âÊ:øítò?ô­Ú‘µç2:idI"E566bcf5c763a731d5966b22da29dae0906cf5ddaadfd394e95a614301ca849d0;F:
+mtimel+3)×W
