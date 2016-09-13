@@ -24,10 +24,10 @@ h1,h2,h3,h4,h5 {
   height: 500px;
   background: no-repeat center center;
   background-attachment: scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
   background-size: cover;
-  -o-background-size: cover;
+  // -o-background-size: cover;
   margin-bottom: 50px;
 }
 
@@ -92,8 +92,10 @@ h1,h2,h3,h4,h5 {
   display: block;
   display: -webkit-box;
   max-height: 400px;
-    -webkit-line-clamp: 5;
-  -webkit-box-orient: vertical;
+    // -webkit-line-clamp: 5;
+    line-clamp: 5;
+  // -webkit-box-orient: vertical;
+  box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
 }
