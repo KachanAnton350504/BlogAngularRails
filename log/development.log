@@ -3830,3 +3830,105 @@ Processing by PostsController#index as JSON
   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
 Completed 206 Partial Content in 28ms (Views: 23.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-13 19:40:55 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#angular as HTML
+  Rendered application/angular.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3116ms (Views: 3106.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-4680706d617232ba4d4980dc8a972994759ef151f4e733c439cd34dc97982739.css?body=1" for 127.0.0.1 at 2016-09-13 19:40:58 +0300
+
+
+Started GET "/assets/auth/authCtrl.self-39b8524078be796aa8b6df7f1663cb934fa54713eeb97d2c81ae2de6c987cd1f.js?body=1" for 127.0.0.1 at 2016-09-13 19:40:58 +0300
+
+
+Started GET "/assets/home/_create_post.self-fc65ac3993003bcd2e45224f6039ecd3bc11a91a32f69b5d734c8a4811b7c6fc.js?body=1" for 127.0.0.1 at 2016-09-13 19:40:58 +0300
+
+
+Started GET "/assets/home/mainCtrl.self-30b448d974b40659e38133f80e27e904b2566284ec0302419f0cfc3859c53c14.js?body=1" for 127.0.0.1 at 2016-09-13 19:40:58 +0300
+
+
+Started GET "/assets/layout/_posts.self-9e4fcb078207ec42028269eadeb2bedeaa473fc2abaa9488a93d1cc28c92df45.js?body=1" for 127.0.0.1 at 2016-09-13 19:40:58 +0300
+
+
+Started GET "/assets/nav/_nav.self-5b0c332778f84db1429d83ec6156c321f98d57711d0ccdcd16ecfcf0c6f4e7d1.js?body=1" for 127.0.0.1 at 2016-09-13 19:40:59 +0300
+
+
+Started GET "/assets/nav/navCtrl.self-f1d7c47465c001f0b2d76b25768d3135c352c2e45d9d2b68a20b4c57d438bedc.js?body=1" for 127.0.0.1 at 2016-09-13 19:40:59 +0300
+
+
+Started GET "/assets/posts/posts.self-f6b4733c0938a3014670ffbc6426eca5a887341098143ef15e5124127a1ea470.js?body=1" for 127.0.0.1 at 2016-09-13 19:40:59 +0300
+
+
+Started GET "/assets/posts/postsCtrl.self-cf6742b1821122d7306fd2b84fa54e48b593ba3b7196a58c984387d297526155.js?body=1" for 127.0.0.1 at 2016-09-13 19:40:59 +0300
+
+
+Started GET "/assets/rubrics/rubricsCtrl.self-22ea23b2f6c24d00a8c40c19f888dc47f43a8fa3accb2a664b31ec2226cf26ad.js?body=1" for 127.0.0.1 at 2016-09-13 19:40:59 +0300
+
+
+Started GET "/assets/redactor-rails.css" for 127.0.0.1 at 2016-09-13 19:40:59 +0300
+
+
+Started POST "/users/sign_in.json" for 127.0.0.1 at 2016-09-13 19:40:59 +0300
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rubrics.json" for 127.0.0.1 at 2016-09-13 19:40:59 +0300
+Processing by RubricsController#index as JSON
+  [1m[35mRubric Load (0.2ms)[0m  SELECT "rubrics".* FROM "rubrics"
+Completed 200 OK in 17ms (Views: 7.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts.json" for 127.0.0.1 at 2016-09-13 19:40:59 +0300
+Processing by PostsController#index as JSON
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT  "posts".* FROM "posts"  ORDER BY created_at DESC LIMIT 2 OFFSET 0
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 30]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 29]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+Completed 206 Partial Content in 73ms (Views: 51.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/rubrics.json" for 127.0.0.1 at 2016-09-13 19:40:59 +0300
+Processing by RubricsController#index as JSON
+  [1m[36mRubric Load (0.2ms)[0m  [1mSELECT "rubrics".* FROM "rubrics"[0m
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/rubrics.json" for 127.0.0.1 at 2016-09-13 19:41:01 +0300
+Processing by RubricsController#index as JSON
+  [1m[35mRubric Load (0.3ms)[0m  SELECT "rubrics".* FROM "rubrics"
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2016-09-13 19:41:03 +0300
+Value for params[:post][:rubric_ids] was set to nil, because it was one of [], [null] or [null, null, ...]. Go to http://guides.rubyonrails.org/security.html#unsafe-query-generation for more information.
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"rubric_ids"=>nil}}
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 0.0ms)
