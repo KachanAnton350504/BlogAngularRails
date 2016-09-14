@@ -4302,3 +4302,1591 @@ Processing by CommentsController#show as HTML
   [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
 Completed 206 Partial Content in 13ms (Views: 4.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-14 15:46:47 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#angular as HTML
+  Rendered application/angular.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 7543ms (Views: 7521.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-b3eb0f5df0e5b8007d5381203c02a6c7ed0c842c4edb720c97ae5695b4d630fc.css?body=1" for 127.0.0.1 at 2016-09-14 15:46:55 +0300
+
+
+Started GET "/assets/redactor-rails.css" for 127.0.0.1 at 2016-09-14 15:46:56 +0300
+
+
+Started POST "/users/sign_in.json" for 127.0.0.1 at 2016-09-14 15:46:56 +0300
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 16ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rubrics.json" for 127.0.0.1 at 2016-09-14 15:46:56 +0300
+Processing by RubricsController#index as JSON
+  [1m[35mRubric Load (0.2ms)[0m  SELECT "rubrics".* FROM "rubrics"
+Completed 200 OK in 118ms (Views: 5.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts.json" for 127.0.0.1 at 2016-09-14 15:46:57 +0300
+Processing by PostsController#index as JSON
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (31.2ms)[0m  SELECT  "posts".* FROM "posts"  ORDER BY created_at DESC LIMIT 2 OFFSET 0
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 30]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 29]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+Completed 206 Partial Content in 166ms (Views: 110.2ms | ActiveRecord: 33.0ms)
+
+
+Started GET "/rubrics.json" for 127.0.0.1 at 2016-09-14 15:46:57 +0300
+Processing by RubricsController#index as JSON
+  [1m[36mRubric Load (0.2ms)[0m  [1mSELECT "rubrics".* FROM "rubrics"[0m
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-14 16:50:10 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#angular as HTML
+  Rendered application/angular.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 2541ms (Views: 2531.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/posts/posts.self-fe415db5787a11dc2f8b8f7ef21f52284ec473dab3fe9b655d057db5034556ea.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:12 +0300
+
+
+Started GET "/assets/redactor-rails.css" for 127.0.0.1 at 2016-09-14 16:50:12 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-14 16:50:18 +0300
+Processing by ApplicationController#angular as HTML
+  Rendered application/angular.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 142ms (Views: 141.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery/dist/jquery.self-4e239680527cb2d6016e15eb767e577a5ba6c75055937d62957773e43b8773a9.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:18 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:18 +0300
+
+
+Started GET "/assets/ckeditor/ckeditor.self-498349d54b8426b82bd9c34dbab22e8e25751f02a86576dcae616bf3d25e0e92.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:18 +0300
+
+
+Started GET "/assets/application.self-b3eb0f5df0e5b8007d5381203c02a6c7ed0c842c4edb720c97ae5695b4d630fc.css?body=1" for 127.0.0.1 at 2016-09-14 16:50:18 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:18 +0300
+
+
+Started GET "/assets/rich/editor/ckeditor_path.self-903b55bdf2bbd1eb170e3583fd877441ac8cb8ca3a2ff2aae4b5e3bb3bff4bbf.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:18 +0300
+
+
+Started GET "/assets/rich/editor/rich_editor.self-e63c9ec0bb6b2df37fcbe80fdc2487777e0896559acd1a68a133f17b61166ec2.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:18 +0300
+
+
+Started GET "/assets/rich/editor/rich_picker.self-02247a68113ef3b90638de39b15c8134f4ddbdc89d4bc96f5a6d1b5a34b8f3a9.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:18 +0300
+
+
+Started GET "/assets/rich.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:18 +0300
+
+
+Started GET "/assets/rich/base.self-4de00900ace61bebe96a1a106a524f17870be23327f3cb6a3fb81d0b67403094.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:18 +0300
+
+
+Started GET "/assets/redactor-rails/redactor.self-2250a479e7c0b2828356169d8b24ba4f92b89e289e0921ceb1d1830571154aad.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:18 +0300
+
+
+Started GET "/assets/redactor-rails/config.self-399da0a94d0e6c97a58dc968035e75eb81981c93ebd5cf0b582da857c36e2005.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:18 +0300
+
+
+Started GET "/assets/redactor-rails.css" for 127.0.0.1 at 2016-09-14 16:50:18 +0300
+
+
+Started GET "/assets/redactor-rails/index.self-75a11da44c802486bc6f65640aa48a730f0f684c5c07a42ba3cd1735eb3fb070.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:18 +0300
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:18 +0300
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:18 +0300
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:18 +0300
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:18 +0300
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:18 +0300
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:18 +0300
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:18 +0300
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:18 +0300
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:18 +0300
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:18 +0300
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:18 +0300
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router.self-0c002d1f8115d21a4b7a82980f422bfa3c96f7d704dcc34367283b0fe61c6717.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:18 +0300
+
+
+Started GET "/assets/angular/angular.self-7f8df3e3ebe7623e233b951726e7da238883fa9e7a98b987ac7aecccf5f00510.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:18 +0300
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:18 +0300
+
+
+Started GET "/assets/angular-rails-templates.self-d4e9edca246d8bb29cee1a576963dee6882e98af2e4f3b228af0c35404b20d7c.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:18 +0300
+
+
+Started GET "/assets/angular-devise/devise.self-633c6de0b47e944b4aab238ff501621349023b511d73dd13f10a376b89ea1a1b.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:19 +0300
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:19 +0300
+
+
+Started GET "/assets/angular-devise.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:19 +0300
+
+
+Started GET "/assets/angular-flash-alert/dist/angular-flash.self-b936f03dd9ecac9797d1f1b6aaf7fa1bb699f016493ba63af62afac9ae11f5b5.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:19 +0300
+
+
+Started GET "/assets/checklist-model/checklist-model.self-9e787938a2c88c0ef029baac341ed6ebce7ec0237d398fc3ef2afa388e9d824b.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:19 +0300
+
+
+Started GET "/assets/angular-paginate-anything/dist/paginate-anything-tpls.self-e4188230108eee348604eaa0a1d4f5456e2f08b388cd2998ddbad30cb35ec75d.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:19 +0300
+
+
+Started GET "/assets/app.self-77e6f2be5e4856071360b552de308704006326ef5a43765f46ae5be9c183a42b.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:19 +0300
+
+
+Started GET "/assets/auth/_errors.self-ba56ffc6bd68df4e7c55298d34d81e907028c0351648afb51cd38d603776d705.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:19 +0300
+
+
+Started GET "/assets/auth/_login.self-370dbb9b346675831d78df0dd9c61e21a8e3708e5c454b78e253ffcfbbaa22ba.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:19 +0300
+
+
+Started GET "/assets/auth/_register.self-eb3248d2388e2cf9805cf2dbe947d4545b5606cc3026a6b460605965700c0b23.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:19 +0300
+
+
+Started GET "/assets/auth/authCtrl.self-39b8524078be796aa8b6df7f1663cb934fa54713eeb97d2c81ae2de6c987cd1f.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:19 +0300
+
+
+Started GET "/assets/home/_create_post.self-fc65ac3993003bcd2e45224f6039ecd3bc11a91a32f69b5d734c8a4811b7c6fc.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:19 +0300
+
+
+Started GET "/assets/home/_home.self-7ce2f225a08b277f309c4f2a92f842fc985eac1cad2f9cdbce97037bdf446df2.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:19 +0300
+
+
+Started GET "/assets/home/mainCtrl.self-30b448d974b40659e38133f80e27e904b2566284ec0302419f0cfc3859c53c14.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:19 +0300
+
+
+Started GET "/assets/layout/_posts.self-9e4fcb078207ec42028269eadeb2bedeaa473fc2abaa9488a93d1cc28c92df45.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:19 +0300
+
+
+Started GET "/assets/layout/_rubrics_list.self-746fe61dde79a68d7588caf6d58e00443a6c6481ebd59f04fc65b42cd0f81f9e.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:19 +0300
+
+
+Started GET "/assets/nav/_nav.self-5b0c332778f84db1429d83ec6156c321f98d57711d0ccdcd16ecfcf0c6f4e7d1.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:19 +0300
+
+
+Started GET "/assets/posts/_posts.self-7ee97ce818db83ff57b86821ef14a4cd2c34262a144d4436d3d356c7fd4bcc6d.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:19 +0300
+
+
+Started GET "/assets/nav/navCtrl.self-f1d7c47465c001f0b2d76b25768d3135c352c2e45d9d2b68a20b4c57d438bedc.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:19 +0300
+
+
+Started GET "/assets/posts/posts.self-fe415db5787a11dc2f8b8f7ef21f52284ec473dab3fe9b655d057db5034556ea.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:19 +0300
+
+
+Started GET "/assets/posts/postsCtrl.self-cf6742b1821122d7306fd2b84fa54e48b593ba3b7196a58c984387d297526155.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:19 +0300
+
+
+Started GET "/assets/rubrics/rubrics.self-d7df26a7c12433aac635f3f080f5086ab0844e02dbad2c834b0ca66a8f8f99ac.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:19 +0300
+
+
+Started GET "/assets/rubrics/_rubrics.self-f065068a38352505ae07a532e645e8dcb33b291e69ed45e3a3594d2108691167.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:19 +0300
+
+
+Started GET "/assets/rubrics/rubricsCtrl.self-22ea23b2f6c24d00a8c40c19f888dc47f43a8fa3accb2a664b31ec2226cf26ad.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:19 +0300
+
+
+Started GET "/assets/application.self-49845c4836a1476d214788cff889c08d33fa1db30f8989214d2d7f81ef885e67.js?body=1" for 127.0.0.1 at 2016-09-14 16:50:19 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-14 17:13:34 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#angular as HTML
+  Rendered application/angular.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 1228ms (Views: 1218.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-b3eb0f5df0e5b8007d5381203c02a6c7ed0c842c4edb720c97ae5695b4d630fc.css?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/jquery/dist/jquery.self-4e239680527cb2d6016e15eb767e577a5ba6c75055937d62957773e43b8773a9.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/ckeditor/ckeditor.self-498349d54b8426b82bd9c34dbab22e8e25751f02a86576dcae616bf3d25e0e92.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/rich/editor/ckeditor_path.self-903b55bdf2bbd1eb170e3583fd877441ac8cb8ca3a2ff2aae4b5e3bb3bff4bbf.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/rich/editor/rich_editor.self-e63c9ec0bb6b2df37fcbe80fdc2487777e0896559acd1a68a133f17b61166ec2.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/rich/editor/rich_picker.self-02247a68113ef3b90638de39b15c8134f4ddbdc89d4bc96f5a6d1b5a34b8f3a9.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/rich/base.self-4de00900ace61bebe96a1a106a524f17870be23327f3cb6a3fb81d0b67403094.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/rich.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/redactor-rails/redactor.self-2250a479e7c0b2828356169d8b24ba4f92b89e289e0921ceb1d1830571154aad.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/redactor-rails/config.self-399da0a94d0e6c97a58dc968035e75eb81981c93ebd5cf0b582da857c36e2005.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/redactor-rails/index.self-75a11da44c802486bc6f65640aa48a730f0f684c5c07a42ba3cd1735eb3fb070.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/redactor-rails.css" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/angular/angular.self-7f8df3e3ebe7623e233b951726e7da238883fa9e7a98b987ac7aecccf5f00510.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router.self-0c002d1f8115d21a4b7a82980f422bfa3c96f7d704dcc34367283b0fe61c6717.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/angular-rails-templates.self-d4e9edca246d8bb29cee1a576963dee6882e98af2e4f3b228af0c35404b20d7c.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/angular-devise/devise.self-633c6de0b47e944b4aab238ff501621349023b511d73dd13f10a376b89ea1a1b.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/angular-devise.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/angular-flash-alert/dist/angular-flash.self-b936f03dd9ecac9797d1f1b6aaf7fa1bb699f016493ba63af62afac9ae11f5b5.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/checklist-model/checklist-model.self-9e787938a2c88c0ef029baac341ed6ebce7ec0237d398fc3ef2afa388e9d824b.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/angular-paginate-anything/dist/paginate-anything-tpls.self-e4188230108eee348604eaa0a1d4f5456e2f08b388cd2998ddbad30cb35ec75d.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/app.self-77e6f2be5e4856071360b552de308704006326ef5a43765f46ae5be9c183a42b.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/auth/_errors.self-ba56ffc6bd68df4e7c55298d34d81e907028c0351648afb51cd38d603776d705.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/auth/_login.self-370dbb9b346675831d78df0dd9c61e21a8e3708e5c454b78e253ffcfbbaa22ba.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/auth/_register.self-eb3248d2388e2cf9805cf2dbe947d4545b5606cc3026a6b460605965700c0b23.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/auth/authCtrl.self-39b8524078be796aa8b6df7f1663cb934fa54713eeb97d2c81ae2de6c987cd1f.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/home/_create_post.self-fc65ac3993003bcd2e45224f6039ecd3bc11a91a32f69b5d734c8a4811b7c6fc.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/home/_home.self-7ce2f225a08b277f309c4f2a92f842fc985eac1cad2f9cdbce97037bdf446df2.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/home/mainCtrl.self-30b448d974b40659e38133f80e27e904b2566284ec0302419f0cfc3859c53c14.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/layout/_posts.self-9e4fcb078207ec42028269eadeb2bedeaa473fc2abaa9488a93d1cc28c92df45.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/layout/_rubrics_list.self-746fe61dde79a68d7588caf6d58e00443a6c6481ebd59f04fc65b42cd0f81f9e.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/nav/_nav.self-5b0c332778f84db1429d83ec6156c321f98d57711d0ccdcd16ecfcf0c6f4e7d1.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/nav/navCtrl.self-f1d7c47465c001f0b2d76b25768d3135c352c2e45d9d2b68a20b4c57d438bedc.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/posts/_posts.self-7ee97ce818db83ff57b86821ef14a4cd2c34262a144d4436d3d356c7fd4bcc6d.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/posts/posts.self-fe415db5787a11dc2f8b8f7ef21f52284ec473dab3fe9b655d057db5034556ea.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/posts/postsCtrl.self-cf6742b1821122d7306fd2b84fa54e48b593ba3b7196a58c984387d297526155.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/rubrics/_rubrics.self-f065068a38352505ae07a532e645e8dcb33b291e69ed45e3a3594d2108691167.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/rubrics/rubrics.self-d7df26a7c12433aac635f3f080f5086ab0844e02dbad2c834b0ca66a8f8f99ac.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/rubrics/rubricsCtrl.self-22ea23b2f6c24d00a8c40c19f888dc47f43a8fa3accb2a664b31ec2226cf26ad.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/assets/application.self-49845c4836a1476d214788cff889c08d33fa1db30f8989214d2d7f81ef885e67.js?body=1" for 127.0.0.1 at 2016-09-14 17:13:35 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-14 17:13:46 +0300
+Processing by ApplicationController#angular as HTML
+  Rendered application/angular.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 140ms (Views: 140.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/redactor-rails.css" for 127.0.0.1 at 2016-09-14 17:13:46 +0300
+
+
+Started GET "/assets/redactor-rails.css" for 127.0.0.1 at 2016-09-14 17:13:57 +0300
+
+
+Started GET "/assets/angular-flash-alert/dist/angular-flash.js.map" for 127.0.0.1 at 2016-09-14 17:13:57 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-14 17:14:10 +0300
+Processing by ApplicationController#angular as HTML
+  Rendered application/angular.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 119ms (Views: 118.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-b3eb0f5df0e5b8007d5381203c02a6c7ed0c842c4edb720c97ae5695b4d630fc.css?body=1" for 127.0.0.1 at 2016-09-14 17:14:10 +0300
+
+
+Started GET "/assets/jquery/dist/jquery.self-4e239680527cb2d6016e15eb767e577a5ba6c75055937d62957773e43b8773a9.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:10 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:10 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:10 +0300
+
+
+Started GET "/assets/rich/editor/ckeditor_path.self-903b55bdf2bbd1eb170e3583fd877441ac8cb8ca3a2ff2aae4b5e3bb3bff4bbf.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:10 +0300
+
+
+Started GET "/assets/rich/editor/rich_editor.self-e63c9ec0bb6b2df37fcbe80fdc2487777e0896559acd1a68a133f17b61166ec2.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:10 +0300
+
+
+Started GET "/assets/ckeditor/ckeditor.self-498349d54b8426b82bd9c34dbab22e8e25751f02a86576dcae616bf3d25e0e92.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:10 +0300
+
+
+Started GET "/assets/rich/editor/rich_picker.self-02247a68113ef3b90638de39b15c8134f4ddbdc89d4bc96f5a6d1b5a34b8f3a9.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:10 +0300
+
+
+Started GET "/assets/rich/base.self-4de00900ace61bebe96a1a106a524f17870be23327f3cb6a3fb81d0b67403094.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:10 +0300
+
+
+Started GET "/assets/rich.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:10 +0300
+
+
+Started GET "/assets/redactor-rails/redactor.self-2250a479e7c0b2828356169d8b24ba4f92b89e289e0921ceb1d1830571154aad.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:10 +0300
+
+
+Started GET "/assets/redactor-rails/config.self-399da0a94d0e6c97a58dc968035e75eb81981c93ebd5cf0b582da857c36e2005.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:10 +0300
+
+
+Started GET "/assets/redactor-rails/index.self-75a11da44c802486bc6f65640aa48a730f0f684c5c07a42ba3cd1735eb3fb070.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:10 +0300
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/redactor-rails.css" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/angular/angular.self-7f8df3e3ebe7623e233b951726e7da238883fa9e7a98b987ac7aecccf5f00510.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router.self-0c002d1f8115d21a4b7a82980f422bfa3c96f7d704dcc34367283b0fe61c6717.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/angular-rails-templates.self-d4e9edca246d8bb29cee1a576963dee6882e98af2e4f3b228af0c35404b20d7c.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/angular-devise.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/angular-devise/devise.self-633c6de0b47e944b4aab238ff501621349023b511d73dd13f10a376b89ea1a1b.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/angular-flash-alert/dist/angular-flash.self-b936f03dd9ecac9797d1f1b6aaf7fa1bb699f016493ba63af62afac9ae11f5b5.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/checklist-model/checklist-model.self-9e787938a2c88c0ef029baac341ed6ebce7ec0237d398fc3ef2afa388e9d824b.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/angular-paginate-anything/dist/paginate-anything-tpls.self-e4188230108eee348604eaa0a1d4f5456e2f08b388cd2998ddbad30cb35ec75d.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/app.self-77e6f2be5e4856071360b552de308704006326ef5a43765f46ae5be9c183a42b.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/auth/_errors.self-ba56ffc6bd68df4e7c55298d34d81e907028c0351648afb51cd38d603776d705.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/auth/_login.self-370dbb9b346675831d78df0dd9c61e21a8e3708e5c454b78e253ffcfbbaa22ba.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/auth/_register.self-eb3248d2388e2cf9805cf2dbe947d4545b5606cc3026a6b460605965700c0b23.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/auth/authCtrl.self-39b8524078be796aa8b6df7f1663cb934fa54713eeb97d2c81ae2de6c987cd1f.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/home/_create_post.self-fc65ac3993003bcd2e45224f6039ecd3bc11a91a32f69b5d734c8a4811b7c6fc.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/home/_home.self-7ce2f225a08b277f309c4f2a92f842fc985eac1cad2f9cdbce97037bdf446df2.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/home/mainCtrl.self-30b448d974b40659e38133f80e27e904b2566284ec0302419f0cfc3859c53c14.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/layout/_posts.self-9e4fcb078207ec42028269eadeb2bedeaa473fc2abaa9488a93d1cc28c92df45.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/layout/_rubrics_list.self-746fe61dde79a68d7588caf6d58e00443a6c6481ebd59f04fc65b42cd0f81f9e.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/nav/_nav.self-5b0c332778f84db1429d83ec6156c321f98d57711d0ccdcd16ecfcf0c6f4e7d1.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/nav/navCtrl.self-f1d7c47465c001f0b2d76b25768d3135c352c2e45d9d2b68a20b4c57d438bedc.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/posts/_posts.self-7ee97ce818db83ff57b86821ef14a4cd2c34262a144d4436d3d356c7fd4bcc6d.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/posts/posts.self-fe415db5787a11dc2f8b8f7ef21f52284ec473dab3fe9b655d057db5034556ea.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/posts/postsCtrl.self-cf6742b1821122d7306fd2b84fa54e48b593ba3b7196a58c984387d297526155.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/rubrics/_rubrics.self-f065068a38352505ae07a532e645e8dcb33b291e69ed45e3a3594d2108691167.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/rubrics/rubrics.self-d7df26a7c12433aac635f3f080f5086ab0844e02dbad2c834b0ca66a8f8f99ac.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/rubrics/rubricsCtrl.self-22ea23b2f6c24d00a8c40c19f888dc47f43a8fa3accb2a664b31ec2226cf26ad.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/application.self-49845c4836a1476d214788cff889c08d33fa1db30f8989214d2d7f81ef885e67.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/assets/angular-flash-alert/dist/angular-flash.js.map" for 127.0.0.1 at 2016-09-14 17:14:11 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-14 17:14:53 +0300
+Processing by ApplicationController#angular as HTML
+  Rendered application/angular.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 657ms (Views: 656.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-b3eb0f5df0e5b8007d5381203c02a6c7ed0c842c4edb720c97ae5695b4d630fc.css?body=1" for 127.0.0.1 at 2016-09-14 17:14:53 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:53 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:53 +0300
+
+
+Started GET "/assets/rich/editor/ckeditor_path.self-903b55bdf2bbd1eb170e3583fd877441ac8cb8ca3a2ff2aae4b5e3bb3bff4bbf.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:53 +0300
+
+
+Started GET "/assets/jquery/dist/jquery.self-4e239680527cb2d6016e15eb767e577a5ba6c75055937d62957773e43b8773a9.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:53 +0300
+
+
+Started GET "/assets/ckeditor/ckeditor.self-498349d54b8426b82bd9c34dbab22e8e25751f02a86576dcae616bf3d25e0e92.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:53 +0300
+
+
+Started GET "/assets/rich/editor/rich_editor.self-e63c9ec0bb6b2df37fcbe80fdc2487777e0896559acd1a68a133f17b61166ec2.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:53 +0300
+
+
+Started GET "/assets/rich/editor/rich_picker.self-02247a68113ef3b90638de39b15c8134f4ddbdc89d4bc96f5a6d1b5a34b8f3a9.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:53 +0300
+
+
+Started GET "/assets/rich/base.self-4de00900ace61bebe96a1a106a524f17870be23327f3cb6a3fb81d0b67403094.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:53 +0300
+
+
+Started GET "/assets/rich.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:53 +0300
+
+
+Started GET "/assets/redactor-rails/redactor.self-2250a479e7c0b2828356169d8b24ba4f92b89e289e0921ceb1d1830571154aad.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:53 +0300
+
+
+Started GET "/assets/redactor-rails.css" for 127.0.0.1 at 2016-09-14 17:14:53 +0300
+
+
+Started GET "/assets/redactor-rails/config.self-399da0a94d0e6c97a58dc968035e75eb81981c93ebd5cf0b582da857c36e2005.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:53 +0300
+
+
+Started GET "/assets/redactor-rails/index.self-75a11da44c802486bc6f65640aa48a730f0f684c5c07a42ba3cd1735eb3fb070.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:53 +0300
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:53 +0300
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:53 +0300
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:53 +0300
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:53 +0300
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:53 +0300
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:53 +0300
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:53 +0300
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:53 +0300
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:53 +0300
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:53 +0300
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:53 +0300
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:53 +0300
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:53 +0300
+
+
+Started GET "/assets/angular/angular.self-7f8df3e3ebe7623e233b951726e7da238883fa9e7a98b987ac7aecccf5f00510.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:54 +0300
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router.self-0c002d1f8115d21a4b7a82980f422bfa3c96f7d704dcc34367283b0fe61c6717.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:54 +0300
+
+
+Started GET "/assets/angular-rails-templates.self-d4e9edca246d8bb29cee1a576963dee6882e98af2e4f3b228af0c35404b20d7c.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:54 +0300
+
+
+Started GET "/assets/angular-devise/devise.self-633c6de0b47e944b4aab238ff501621349023b511d73dd13f10a376b89ea1a1b.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:54 +0300
+
+
+Started GET "/assets/angular-devise.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:54 +0300
+
+
+Started GET "/assets/angular-flash-alert/dist/angular-flash.self-b936f03dd9ecac9797d1f1b6aaf7fa1bb699f016493ba63af62afac9ae11f5b5.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:54 +0300
+
+
+Started GET "/assets/checklist-model/checklist-model.self-9e787938a2c88c0ef029baac341ed6ebce7ec0237d398fc3ef2afa388e9d824b.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:54 +0300
+
+
+Started GET "/assets/angular-paginate-anything/dist/paginate-anything-tpls.self-e4188230108eee348604eaa0a1d4f5456e2f08b388cd2998ddbad30cb35ec75d.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:54 +0300
+
+
+Started GET "/assets/app.self-77e6f2be5e4856071360b552de308704006326ef5a43765f46ae5be9c183a42b.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:54 +0300
+
+
+Started GET "/assets/auth/_errors.self-ba56ffc6bd68df4e7c55298d34d81e907028c0351648afb51cd38d603776d705.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:54 +0300
+
+
+Started GET "/assets/auth/_login.self-370dbb9b346675831d78df0dd9c61e21a8e3708e5c454b78e253ffcfbbaa22ba.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:54 +0300
+
+
+Started GET "/assets/auth/_register.self-eb3248d2388e2cf9805cf2dbe947d4545b5606cc3026a6b460605965700c0b23.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:54 +0300
+
+
+Started GET "/assets/auth/authCtrl.self-39b8524078be796aa8b6df7f1663cb934fa54713eeb97d2c81ae2de6c987cd1f.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:54 +0300
+
+
+Started GET "/assets/home/_create_post.self-fc65ac3993003bcd2e45224f6039ecd3bc11a91a32f69b5d734c8a4811b7c6fc.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:54 +0300
+
+
+Started GET "/assets/home/_home.self-7ce2f225a08b277f309c4f2a92f842fc985eac1cad2f9cdbce97037bdf446df2.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:54 +0300
+
+
+Started GET "/assets/home/mainCtrl.self-30b448d974b40659e38133f80e27e904b2566284ec0302419f0cfc3859c53c14.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:54 +0300
+
+
+Started GET "/assets/layout/_posts.self-9e4fcb078207ec42028269eadeb2bedeaa473fc2abaa9488a93d1cc28c92df45.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:54 +0300
+
+
+Started GET "/assets/layout/_rubrics_list.self-746fe61dde79a68d7588caf6d58e00443a6c6481ebd59f04fc65b42cd0f81f9e.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:54 +0300
+
+
+Started GET "/assets/nav/_nav.self-5b0c332778f84db1429d83ec6156c321f98d57711d0ccdcd16ecfcf0c6f4e7d1.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:54 +0300
+
+
+Started GET "/assets/nav/navCtrl.self-f1d7c47465c001f0b2d76b25768d3135c352c2e45d9d2b68a20b4c57d438bedc.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:54 +0300
+
+
+Started GET "/assets/posts/_posts.self-7ee97ce818db83ff57b86821ef14a4cd2c34262a144d4436d3d356c7fd4bcc6d.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:54 +0300
+
+
+Started GET "/assets/posts/posts.self-fe415db5787a11dc2f8b8f7ef21f52284ec473dab3fe9b655d057db5034556ea.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:54 +0300
+
+
+Started GET "/assets/posts/postsCtrl.self-cf6742b1821122d7306fd2b84fa54e48b593ba3b7196a58c984387d297526155.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:54 +0300
+
+
+Started GET "/assets/rubrics/_rubrics.self-f065068a38352505ae07a532e645e8dcb33b291e69ed45e3a3594d2108691167.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:54 +0300
+
+
+Started GET "/assets/rubrics/rubrics.self-dc75424511e7c43bfacceac2e33d9d5aeabadea03977b04275122f03d475de15.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:54 +0300
+
+
+Started GET "/assets/rubrics/rubricsCtrl.self-22ea23b2f6c24d00a8c40c19f888dc47f43a8fa3accb2a664b31ec2226cf26ad.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:54 +0300
+
+
+Started GET "/assets/application.self-49845c4836a1476d214788cff889c08d33fa1db30f8989214d2d7f81ef885e67.js?body=1" for 127.0.0.1 at 2016-09-14 17:14:54 +0300
+
+
+Started GET "/assets/angular-flash-alert/dist/angular-flash.js.map" for 127.0.0.1 at 2016-09-14 17:14:54 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-14 17:15:20 +0300
+Processing by ApplicationController#angular as HTML
+  Rendered application/angular.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 607ms (Views: 606.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-b3eb0f5df0e5b8007d5381203c02a6c7ed0c842c4edb720c97ae5695b4d630fc.css?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/jquery/dist/jquery.self-4e239680527cb2d6016e15eb767e577a5ba6c75055937d62957773e43b8773a9.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/ckeditor/ckeditor.self-498349d54b8426b82bd9c34dbab22e8e25751f02a86576dcae616bf3d25e0e92.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/rich/editor/ckeditor_path.self-903b55bdf2bbd1eb170e3583fd877441ac8cb8ca3a2ff2aae4b5e3bb3bff4bbf.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/rich/editor/rich_editor.self-e63c9ec0bb6b2df37fcbe80fdc2487777e0896559acd1a68a133f17b61166ec2.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/rich/editor/rich_picker.self-02247a68113ef3b90638de39b15c8134f4ddbdc89d4bc96f5a6d1b5a34b8f3a9.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/rich/base.self-4de00900ace61bebe96a1a106a524f17870be23327f3cb6a3fb81d0b67403094.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/rich.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/redactor-rails/redactor.self-2250a479e7c0b2828356169d8b24ba4f92b89e289e0921ceb1d1830571154aad.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/redactor-rails/config.self-399da0a94d0e6c97a58dc968035e75eb81981c93ebd5cf0b582da857c36e2005.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/redactor-rails/index.self-75a11da44c802486bc6f65640aa48a730f0f684c5c07a42ba3cd1735eb3fb070.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/redactor-rails.css" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/angular/angular.self-7f8df3e3ebe7623e233b951726e7da238883fa9e7a98b987ac7aecccf5f00510.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router.self-0c002d1f8115d21a4b7a82980f422bfa3c96f7d704dcc34367283b0fe61c6717.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/angular-rails-templates.self-d4e9edca246d8bb29cee1a576963dee6882e98af2e4f3b228af0c35404b20d7c.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/angular-devise/devise.self-633c6de0b47e944b4aab238ff501621349023b511d73dd13f10a376b89ea1a1b.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/angular-devise.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/angular-flash-alert/dist/angular-flash.self-b936f03dd9ecac9797d1f1b6aaf7fa1bb699f016493ba63af62afac9ae11f5b5.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/checklist-model/checklist-model.self-9e787938a2c88c0ef029baac341ed6ebce7ec0237d398fc3ef2afa388e9d824b.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/angular-paginate-anything/dist/paginate-anything-tpls.self-e4188230108eee348604eaa0a1d4f5456e2f08b388cd2998ddbad30cb35ec75d.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/app.self-77e6f2be5e4856071360b552de308704006326ef5a43765f46ae5be9c183a42b.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/auth/_errors.self-ba56ffc6bd68df4e7c55298d34d81e907028c0351648afb51cd38d603776d705.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/auth/_login.self-370dbb9b346675831d78df0dd9c61e21a8e3708e5c454b78e253ffcfbbaa22ba.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/auth/_register.self-eb3248d2388e2cf9805cf2dbe947d4545b5606cc3026a6b460605965700c0b23.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/auth/authCtrl.self-39b8524078be796aa8b6df7f1663cb934fa54713eeb97d2c81ae2de6c987cd1f.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/home/_create_post.self-fc65ac3993003bcd2e45224f6039ecd3bc11a91a32f69b5d734c8a4811b7c6fc.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/home/_home.self-7ce2f225a08b277f309c4f2a92f842fc985eac1cad2f9cdbce97037bdf446df2.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/home/mainCtrl.self-30b448d974b40659e38133f80e27e904b2566284ec0302419f0cfc3859c53c14.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/layout/_posts.self-9e4fcb078207ec42028269eadeb2bedeaa473fc2abaa9488a93d1cc28c92df45.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/layout/_rubrics_list.self-746fe61dde79a68d7588caf6d58e00443a6c6481ebd59f04fc65b42cd0f81f9e.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/nav/_nav.self-5b0c332778f84db1429d83ec6156c321f98d57711d0ccdcd16ecfcf0c6f4e7d1.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/nav/navCtrl.self-f1d7c47465c001f0b2d76b25768d3135c352c2e45d9d2b68a20b4c57d438bedc.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/posts/_posts.self-7ee97ce818db83ff57b86821ef14a4cd2c34262a144d4436d3d356c7fd4bcc6d.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/posts/posts.self-c9b87e673cfed2e79a9c0a45f684483ca37565c84581ac242a1b4f00d2ea4c0a.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/posts/postsCtrl.self-cf6742b1821122d7306fd2b84fa54e48b593ba3b7196a58c984387d297526155.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/rubrics/_rubrics.self-f065068a38352505ae07a532e645e8dcb33b291e69ed45e3a3594d2108691167.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/rubrics/rubrics.self-d7df26a7c12433aac635f3f080f5086ab0844e02dbad2c834b0ca66a8f8f99ac.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/rubrics/rubricsCtrl.self-22ea23b2f6c24d00a8c40c19f888dc47f43a8fa3accb2a664b31ec2226cf26ad.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/application.self-49845c4836a1476d214788cff889c08d33fa1db30f8989214d2d7f81ef885e67.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/assets/angular-flash-alert/dist/angular-flash.js.map" for 127.0.0.1 at 2016-09-14 17:15:21 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-14 17:15:23 +0300
+Processing by ApplicationController#angular as HTML
+  Rendered application/angular.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 102ms (Views: 101.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery/dist/jquery.self-4e239680527cb2d6016e15eb767e577a5ba6c75055937d62957773e43b8773a9.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:23 +0300
+
+
+Started GET "/assets/application.self-b3eb0f5df0e5b8007d5381203c02a6c7ed0c842c4edb720c97ae5695b4d630fc.css?body=1" for 127.0.0.1 at 2016-09-14 17:15:23 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:23 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:23 +0300
+
+
+Started GET "/assets/ckeditor/ckeditor.self-498349d54b8426b82bd9c34dbab22e8e25751f02a86576dcae616bf3d25e0e92.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:23 +0300
+
+
+Started GET "/assets/rich/editor/ckeditor_path.self-903b55bdf2bbd1eb170e3583fd877441ac8cb8ca3a2ff2aae4b5e3bb3bff4bbf.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:23 +0300
+
+
+Started GET "/assets/rich/editor/rich_editor.self-e63c9ec0bb6b2df37fcbe80fdc2487777e0896559acd1a68a133f17b61166ec2.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:23 +0300
+
+
+Started GET "/assets/rich/editor/rich_picker.self-02247a68113ef3b90638de39b15c8134f4ddbdc89d4bc96f5a6d1b5a34b8f3a9.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:23 +0300
+
+
+Started GET "/assets/rich/base.self-4de00900ace61bebe96a1a106a524f17870be23327f3cb6a3fb81d0b67403094.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:23 +0300
+
+
+Started GET "/assets/rich.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:23 +0300
+
+
+Started GET "/assets/redactor-rails/redactor.self-2250a479e7c0b2828356169d8b24ba4f92b89e289e0921ceb1d1830571154aad.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:23 +0300
+
+
+Started GET "/assets/redactor-rails/config.self-399da0a94d0e6c97a58dc968035e75eb81981c93ebd5cf0b582da857c36e2005.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:23 +0300
+
+
+Started GET "/assets/redactor-rails/index.self-75a11da44c802486bc6f65640aa48a730f0f684c5c07a42ba3cd1735eb3fb070.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:23 +0300
+
+
+Started GET "/assets/redactor-rails.css" for 127.0.0.1 at 2016-09-14 17:15:23 +0300
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:23 +0300
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:23 +0300
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:23 +0300
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:23 +0300
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:23 +0300
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:23 +0300
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:23 +0300
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:23 +0300
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:23 +0300
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:23 +0300
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:23 +0300
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:23 +0300
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:23 +0300
+
+
+Started GET "/assets/angular/angular.self-7f8df3e3ebe7623e233b951726e7da238883fa9e7a98b987ac7aecccf5f00510.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:23 +0300
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router.self-0c002d1f8115d21a4b7a82980f422bfa3c96f7d704dcc34367283b0fe61c6717.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:23 +0300
+
+
+Started GET "/assets/angular-rails-templates.self-d4e9edca246d8bb29cee1a576963dee6882e98af2e4f3b228af0c35404b20d7c.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:23 +0300
+
+
+Started GET "/assets/angular-devise/devise.self-633c6de0b47e944b4aab238ff501621349023b511d73dd13f10a376b89ea1a1b.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:23 +0300
+
+
+Started GET "/assets/angular-devise.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:23 +0300
+
+
+Started GET "/assets/angular-flash-alert/dist/angular-flash.self-b936f03dd9ecac9797d1f1b6aaf7fa1bb699f016493ba63af62afac9ae11f5b5.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:23 +0300
+
+
+Started GET "/assets/checklist-model/checklist-model.self-9e787938a2c88c0ef029baac341ed6ebce7ec0237d398fc3ef2afa388e9d824b.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:23 +0300
+
+
+Started GET "/assets/angular-paginate-anything/dist/paginate-anything-tpls.self-e4188230108eee348604eaa0a1d4f5456e2f08b388cd2998ddbad30cb35ec75d.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:23 +0300
+
+
+Started GET "/assets/app.self-77e6f2be5e4856071360b552de308704006326ef5a43765f46ae5be9c183a42b.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:24 +0300
+
+
+Started GET "/assets/auth/_errors.self-ba56ffc6bd68df4e7c55298d34d81e907028c0351648afb51cd38d603776d705.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:24 +0300
+
+
+Started GET "/assets/auth/_login.self-370dbb9b346675831d78df0dd9c61e21a8e3708e5c454b78e253ffcfbbaa22ba.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:24 +0300
+
+
+Started GET "/assets/auth/_register.self-eb3248d2388e2cf9805cf2dbe947d4545b5606cc3026a6b460605965700c0b23.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:24 +0300
+
+
+Started GET "/assets/auth/authCtrl.self-39b8524078be796aa8b6df7f1663cb934fa54713eeb97d2c81ae2de6c987cd1f.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:24 +0300
+
+
+Started GET "/assets/home/_create_post.self-fc65ac3993003bcd2e45224f6039ecd3bc11a91a32f69b5d734c8a4811b7c6fc.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:24 +0300
+
+
+Started GET "/assets/home/_home.self-7ce2f225a08b277f309c4f2a92f842fc985eac1cad2f9cdbce97037bdf446df2.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:24 +0300
+
+
+Started GET "/assets/home/mainCtrl.self-30b448d974b40659e38133f80e27e904b2566284ec0302419f0cfc3859c53c14.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:24 +0300
+
+
+Started GET "/assets/layout/_posts.self-9e4fcb078207ec42028269eadeb2bedeaa473fc2abaa9488a93d1cc28c92df45.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:24 +0300
+
+
+Started GET "/assets/layout/_rubrics_list.self-746fe61dde79a68d7588caf6d58e00443a6c6481ebd59f04fc65b42cd0f81f9e.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:24 +0300
+
+
+Started GET "/assets/nav/_nav.self-5b0c332778f84db1429d83ec6156c321f98d57711d0ccdcd16ecfcf0c6f4e7d1.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:24 +0300
+
+
+Started GET "/assets/nav/navCtrl.self-f1d7c47465c001f0b2d76b25768d3135c352c2e45d9d2b68a20b4c57d438bedc.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:24 +0300
+
+
+Started GET "/assets/posts/_posts.self-7ee97ce818db83ff57b86821ef14a4cd2c34262a144d4436d3d356c7fd4bcc6d.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:24 +0300
+
+
+Started GET "/assets/posts/posts.self-c9b87e673cfed2e79a9c0a45f684483ca37565c84581ac242a1b4f00d2ea4c0a.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:24 +0300
+
+
+Started GET "/assets/posts/postsCtrl.self-cf6742b1821122d7306fd2b84fa54e48b593ba3b7196a58c984387d297526155.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:24 +0300
+
+
+Started GET "/assets/rubrics/_rubrics.self-f065068a38352505ae07a532e645e8dcb33b291e69ed45e3a3594d2108691167.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:24 +0300
+
+
+Started GET "/assets/rubrics/rubrics.self-d7df26a7c12433aac635f3f080f5086ab0844e02dbad2c834b0ca66a8f8f99ac.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:24 +0300
+
+
+Started GET "/assets/rubrics/rubricsCtrl.self-22ea23b2f6c24d00a8c40c19f888dc47f43a8fa3accb2a664b31ec2226cf26ad.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:24 +0300
+
+
+Started GET "/assets/application.self-49845c4836a1476d214788cff889c08d33fa1db30f8989214d2d7f81ef885e67.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:24 +0300
+
+
+Started GET "/assets/angular-flash-alert/dist/angular-flash.js.map" for 127.0.0.1 at 2016-09-14 17:15:24 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-14 17:15:39 +0300
+Processing by ApplicationController#angular as HTML
+  Rendered application/angular.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 125ms (Views: 124.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery/dist/jquery.self-4e239680527cb2d6016e15eb767e577a5ba6c75055937d62957773e43b8773a9.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:39 +0300
+
+
+Started GET "/assets/application.self-b3eb0f5df0e5b8007d5381203c02a6c7ed0c842c4edb720c97ae5695b4d630fc.css?body=1" for 127.0.0.1 at 2016-09-14 17:15:39 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:39 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:39 +0300
+
+
+Started GET "/assets/ckeditor/ckeditor.self-498349d54b8426b82bd9c34dbab22e8e25751f02a86576dcae616bf3d25e0e92.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:39 +0300
+
+
+Started GET "/assets/rich/editor/ckeditor_path.self-903b55bdf2bbd1eb170e3583fd877441ac8cb8ca3a2ff2aae4b5e3bb3bff4bbf.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:39 +0300
+
+
+Started GET "/assets/rich/editor/rich_editor.self-e63c9ec0bb6b2df37fcbe80fdc2487777e0896559acd1a68a133f17b61166ec2.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:39 +0300
+
+
+Started GET "/assets/rich/editor/rich_picker.self-02247a68113ef3b90638de39b15c8134f4ddbdc89d4bc96f5a6d1b5a34b8f3a9.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:39 +0300
+
+
+Started GET "/assets/rich/base.self-4de00900ace61bebe96a1a106a524f17870be23327f3cb6a3fb81d0b67403094.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:39 +0300
+
+
+Started GET "/assets/rich.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:39 +0300
+
+
+Started GET "/assets/redactor-rails/redactor.self-2250a479e7c0b2828356169d8b24ba4f92b89e289e0921ceb1d1830571154aad.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:39 +0300
+
+
+Started GET "/assets/redactor-rails/config.self-399da0a94d0e6c97a58dc968035e75eb81981c93ebd5cf0b582da857c36e2005.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:39 +0300
+
+
+Started GET "/assets/redactor-rails/index.self-75a11da44c802486bc6f65640aa48a730f0f684c5c07a42ba3cd1735eb3fb070.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:39 +0300
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:39 +0300
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/assets/redactor-rails.css" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/assets/angular/angular.self-7f8df3e3ebe7623e233b951726e7da238883fa9e7a98b987ac7aecccf5f00510.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router.self-0c002d1f8115d21a4b7a82980f422bfa3c96f7d704dcc34367283b0fe61c6717.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/assets/angular-rails-templates.self-d4e9edca246d8bb29cee1a576963dee6882e98af2e4f3b228af0c35404b20d7c.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/assets/angular-devise/devise.self-633c6de0b47e944b4aab238ff501621349023b511d73dd13f10a376b89ea1a1b.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/assets/angular-devise.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/assets/angular-flash-alert/dist/angular-flash.self-b936f03dd9ecac9797d1f1b6aaf7fa1bb699f016493ba63af62afac9ae11f5b5.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/assets/checklist-model/checklist-model.self-9e787938a2c88c0ef029baac341ed6ebce7ec0237d398fc3ef2afa388e9d824b.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/assets/angular-paginate-anything/dist/paginate-anything-tpls.self-e4188230108eee348604eaa0a1d4f5456e2f08b388cd2998ddbad30cb35ec75d.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/assets/app.self-77e6f2be5e4856071360b552de308704006326ef5a43765f46ae5be9c183a42b.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/assets/auth/_errors.self-ba56ffc6bd68df4e7c55298d34d81e907028c0351648afb51cd38d603776d705.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/assets/auth/_login.self-370dbb9b346675831d78df0dd9c61e21a8e3708e5c454b78e253ffcfbbaa22ba.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/assets/auth/_register.self-eb3248d2388e2cf9805cf2dbe947d4545b5606cc3026a6b460605965700c0b23.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/assets/auth/authCtrl.self-39b8524078be796aa8b6df7f1663cb934fa54713eeb97d2c81ae2de6c987cd1f.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/assets/home/_create_post.self-fc65ac3993003bcd2e45224f6039ecd3bc11a91a32f69b5d734c8a4811b7c6fc.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/assets/home/_home.self-7ce2f225a08b277f309c4f2a92f842fc985eac1cad2f9cdbce97037bdf446df2.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/assets/home/mainCtrl.self-30b448d974b40659e38133f80e27e904b2566284ec0302419f0cfc3859c53c14.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/assets/layout/_posts.self-9e4fcb078207ec42028269eadeb2bedeaa473fc2abaa9488a93d1cc28c92df45.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/assets/layout/_rubrics_list.self-746fe61dde79a68d7588caf6d58e00443a6c6481ebd59f04fc65b42cd0f81f9e.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/assets/nav/_nav.self-5b0c332778f84db1429d83ec6156c321f98d57711d0ccdcd16ecfcf0c6f4e7d1.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/assets/nav/navCtrl.self-f1d7c47465c001f0b2d76b25768d3135c352c2e45d9d2b68a20b4c57d438bedc.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/assets/posts/_posts.self-7ee97ce818db83ff57b86821ef14a4cd2c34262a144d4436d3d356c7fd4bcc6d.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/assets/posts/posts.self-f6b4733c0938a3014670ffbc6426eca5a887341098143ef15e5124127a1ea470.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/assets/posts/postsCtrl.self-cf6742b1821122d7306fd2b84fa54e48b593ba3b7196a58c984387d297526155.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/assets/rubrics/_rubrics.self-f065068a38352505ae07a532e645e8dcb33b291e69ed45e3a3594d2108691167.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/assets/rubrics/rubrics.self-d7df26a7c12433aac635f3f080f5086ab0844e02dbad2c834b0ca66a8f8f99ac.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/assets/rubrics/rubricsCtrl.self-22ea23b2f6c24d00a8c40c19f888dc47f43a8fa3accb2a664b31ec2226cf26ad.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/assets/application.self-49845c4836a1476d214788cff889c08d33fa1db30f8989214d2d7f81ef885e67.js?body=1" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/assets/angular-flash-alert/dist/angular-flash.js.map" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+
+
+Started GET "/rubrics.json" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+Processing by RubricsController#index as JSON
+  [1m[35mRubric Load (0.2ms)[0m  SELECT "rubrics".* FROM "rubrics"
+Completed 200 OK in 18ms (Views: 7.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/sign_in.json" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rubrics.json" for 127.0.0.1 at 2016-09-14 17:15:40 +0300
+Processing by RubricsController#index as JSON
+  [1m[36mRubric Load (0.2ms)[0m  [1mSELECT "rubrics".* FROM "rubrics"[0m
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-14 17:32:40 +0300
+Processing by ApplicationController#angular as HTML
+  Rendered application/angular.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 115ms (Views: 114.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/redactor-rails.css" for 127.0.0.1 at 2016-09-14 17:32:40 +0300
+
+
+Started GET "/rubrics.json" for 127.0.0.1 at 2016-09-14 17:32:40 +0300
+Processing by RubricsController#index as JSON
+  [1m[35mRubric Load (0.3ms)[0m  SELECT "rubrics".* FROM "rubrics"
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/sign_in.json" for 127.0.0.1 at 2016-09-14 17:32:40 +0300
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rubrics.json" for 127.0.0.1 at 2016-09-14 17:32:40 +0300
+Processing by RubricsController#index as JSON
+  [1m[36mRubric Load (0.2ms)[0m  [1mSELECT "rubrics".* FROM "rubrics"[0m
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts.json" for 127.0.0.1 at 2016-09-14 17:32:40 +0300
+Processing by PostsController#index as JSON
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts"  ORDER BY created_at DESC LIMIT 2 OFFSET 0[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 30]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 29]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+Completed 206 Partial Content in 74ms (Views: 55.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-14 17:33:24 +0300
+Processing by ApplicationController#angular as HTML
+  Rendered application/angular.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 645ms (Views: 645.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-b3eb0f5df0e5b8007d5381203c02a6c7ed0c842c4edb720c97ae5695b4d630fc.css?body=1" for 127.0.0.1 at 2016-09-14 17:33:24 +0300
+
+
+Started GET "/assets/jquery/dist/jquery.self-4e239680527cb2d6016e15eb767e577a5ba6c75055937d62957773e43b8773a9.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:24 +0300
+
+
+Started GET "/assets/rich/editor/ckeditor_path.self-903b55bdf2bbd1eb170e3583fd877441ac8cb8ca3a2ff2aae4b5e3bb3bff4bbf.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:24 +0300
+
+
+Started GET "/assets/ckeditor/ckeditor.self-498349d54b8426b82bd9c34dbab22e8e25751f02a86576dcae616bf3d25e0e92.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:24 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:24 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:24 +0300
+
+
+Started GET "/assets/rich/editor/rich_editor.self-e63c9ec0bb6b2df37fcbe80fdc2487777e0896559acd1a68a133f17b61166ec2.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:24 +0300
+
+
+Started GET "/assets/rich/editor/rich_picker.self-02247a68113ef3b90638de39b15c8134f4ddbdc89d4bc96f5a6d1b5a34b8f3a9.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:24 +0300
+
+
+Started GET "/assets/rich/base.self-4de00900ace61bebe96a1a106a524f17870be23327f3cb6a3fb81d0b67403094.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:24 +0300
+
+
+Started GET "/assets/rich.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:24 +0300
+
+
+Started GET "/assets/redactor-rails/redactor.self-2250a479e7c0b2828356169d8b24ba4f92b89e289e0921ceb1d1830571154aad.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:24 +0300
+
+
+Started GET "/assets/redactor-rails/index.self-75a11da44c802486bc6f65640aa48a730f0f684c5c07a42ba3cd1735eb3fb070.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:24 +0300
+
+
+Started GET "/assets/redactor-rails/config.self-399da0a94d0e6c97a58dc968035e75eb81981c93ebd5cf0b582da857c36e2005.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:24 +0300
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:24 +0300
+
+
+Started GET "/assets/redactor-rails.css" for 127.0.0.1 at 2016-09-14 17:33:24 +0300
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:24 +0300
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:24 +0300
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:24 +0300
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:24 +0300
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:24 +0300
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:24 +0300
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:24 +0300
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:24 +0300
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:24 +0300
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:24 +0300
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:24 +0300
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:24 +0300
+
+
+Started GET "/assets/angular/angular.self-7f8df3e3ebe7623e233b951726e7da238883fa9e7a98b987ac7aecccf5f00510.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:24 +0300
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router.self-0c002d1f8115d21a4b7a82980f422bfa3c96f7d704dcc34367283b0fe61c6717.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:24 +0300
+
+
+Started GET "/assets/angular-rails-templates.self-d4e9edca246d8bb29cee1a576963dee6882e98af2e4f3b228af0c35404b20d7c.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:25 +0300
+
+
+Started GET "/assets/angular-devise/devise.self-633c6de0b47e944b4aab238ff501621349023b511d73dd13f10a376b89ea1a1b.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:25 +0300
+
+
+Started GET "/assets/app.self-3606f9cd9b7b241319edb90fa10bc5a2cffcbce6ff8c99dbfaf95253ce055f4c.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:25 +0300
+
+
+Started GET "/assets/angular-devise.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:25 +0300
+
+
+Started GET "/assets/angular-flash-alert/dist/angular-flash.self-b936f03dd9ecac9797d1f1b6aaf7fa1bb699f016493ba63af62afac9ae11f5b5.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:25 +0300
+
+
+Started GET "/assets/checklist-model/checklist-model.self-9e787938a2c88c0ef029baac341ed6ebce7ec0237d398fc3ef2afa388e9d824b.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:25 +0300
+
+
+Started GET "/assets/angular-paginate-anything/dist/paginate-anything-tpls.self-e4188230108eee348604eaa0a1d4f5456e2f08b388cd2998ddbad30cb35ec75d.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:25 +0300
+
+
+Started GET "/assets/auth/_errors.self-ba56ffc6bd68df4e7c55298d34d81e907028c0351648afb51cd38d603776d705.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:25 +0300
+
+
+Started GET "/assets/auth/_login.self-370dbb9b346675831d78df0dd9c61e21a8e3708e5c454b78e253ffcfbbaa22ba.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:25 +0300
+
+
+Started GET "/assets/auth/_register.self-eb3248d2388e2cf9805cf2dbe947d4545b5606cc3026a6b460605965700c0b23.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:25 +0300
+
+
+Started GET "/assets/auth/authCtrl.self-39b8524078be796aa8b6df7f1663cb934fa54713eeb97d2c81ae2de6c987cd1f.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:25 +0300
+
+
+Started GET "/assets/home/_create_post.self-fc65ac3993003bcd2e45224f6039ecd3bc11a91a32f69b5d734c8a4811b7c6fc.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:25 +0300
+
+
+Started GET "/assets/home/_home.self-7ce2f225a08b277f309c4f2a92f842fc985eac1cad2f9cdbce97037bdf446df2.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:25 +0300
+
+
+Started GET "/assets/home/mainCtrl.self-30b448d974b40659e38133f80e27e904b2566284ec0302419f0cfc3859c53c14.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:25 +0300
+
+
+Started GET "/assets/layout/_posts.self-9e4fcb078207ec42028269eadeb2bedeaa473fc2abaa9488a93d1cc28c92df45.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:25 +0300
+
+
+Started GET "/assets/layout/_rubrics_list.self-746fe61dde79a68d7588caf6d58e00443a6c6481ebd59f04fc65b42cd0f81f9e.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:25 +0300
+
+
+Started GET "/assets/nav/_nav.self-5b0c332778f84db1429d83ec6156c321f98d57711d0ccdcd16ecfcf0c6f4e7d1.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:25 +0300
+
+
+Started GET "/assets/nav/navCtrl.self-f1d7c47465c001f0b2d76b25768d3135c352c2e45d9d2b68a20b4c57d438bedc.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:25 +0300
+
+
+Started GET "/assets/posts/_posts.self-7ee97ce818db83ff57b86821ef14a4cd2c34262a144d4436d3d356c7fd4bcc6d.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:25 +0300
+
+
+Started GET "/assets/posts/posts.self-f6b4733c0938a3014670ffbc6426eca5a887341098143ef15e5124127a1ea470.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:25 +0300
+
+
+Started GET "/assets/posts/postsCtrl.self-cf6742b1821122d7306fd2b84fa54e48b593ba3b7196a58c984387d297526155.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:25 +0300
+
+
+Started GET "/assets/rubrics/_rubrics.self-f065068a38352505ae07a532e645e8dcb33b291e69ed45e3a3594d2108691167.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:25 +0300
+
+
+Started GET "/assets/rubrics/rubrics.self-d7df26a7c12433aac635f3f080f5086ab0844e02dbad2c834b0ca66a8f8f99ac.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:25 +0300
+
+
+Started GET "/assets/rubrics/rubricsCtrl.self-22ea23b2f6c24d00a8c40c19f888dc47f43a8fa3accb2a664b31ec2226cf26ad.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:25 +0300
+
+
+Started GET "/assets/application.self-49845c4836a1476d214788cff889c08d33fa1db30f8989214d2d7f81ef885e67.js?body=1" for 127.0.0.1 at 2016-09-14 17:33:25 +0300
+
+
+Started POST "/users/sign_in.json" for 127.0.0.1 at 2016-09-14 17:33:25 +0300
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rubrics.json" for 127.0.0.1 at 2016-09-14 17:33:25 +0300
+Processing by RubricsController#index as JSON
+  [1m[35mRubric Load (0.2ms)[0m  SELECT "rubrics".* FROM "rubrics"
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/rubrics.json" for 127.0.0.1 at 2016-09-14 17:33:25 +0300
+Processing by RubricsController#index as JSON
+  [1m[36mRubric Load (0.2ms)[0m  [1mSELECT "rubrics".* FROM "rubrics"[0m
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts.json" for 127.0.0.1 at 2016-09-14 17:33:25 +0300
+Processing by PostsController#index as JSON
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts"  ORDER BY created_at DESC LIMIT 2 OFFSET 0[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 30]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 29]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+Completed 206 Partial Content in 27ms (Views: 20.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/redactor-rails.css" for 127.0.0.1 at 2016-09-14 17:33:32 +0300
+
+
+Started GET "/assets/angular-flash-alert/dist/angular-flash.js.map" for 127.0.0.1 at 2016-09-14 17:33:32 +0300
+
+
+Started POST "/users/sign_in.json" for 127.0.0.1 at 2016-09-14 17:33:41 +0300
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"anton.kachan1996@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"anton.kachan1996@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "anton.kachan1996@gmail.com"]]
+Completed 401 Unauthorized in 177ms (ActiveRecord: 0.2ms)

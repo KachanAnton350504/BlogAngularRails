@@ -61,11 +61,11 @@ function($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.otherwise('home');
 }])
-.config((FlashProvider) => {
-    FlashProvider.setTimeout(5000);
-    FlashProvider.setShowClose(true);
-})
-.config(function(AuthInterceptProvider) {
-        // Intercept 401 Unauthorized everywhere
-        AuthInterceptProvider.interceptAuth(true);
-});
+// // .config((FlashProvider) => {
+// //     FlashProvider.setTimeout(5000);
+// //     FlashProvider.setShowClose(true);
+// // })
+// .config(function(AuthInterceptProvider) {
+//         // Intercept 401 Unauthorized everywhere
+//         AuthInterceptProvider.interceptAuth(true);
+// });
