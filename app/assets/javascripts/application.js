@@ -2,7 +2,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require rich
 //= require redactor-rails
 //= require bootstrap-sprockets
 

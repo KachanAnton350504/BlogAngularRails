@@ -15,9 +15,9 @@ module Blog
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
     # config.time_zone = 'Central Time (US & Canada)'
-config.to_prepare do
-  Devise::SessionsController.skip_before_filter :authenticate_user!
-end
+# config.to_prepare do
+#   Devise::SessionsController.skip_before_filter :authenticate_user!
+# end
 
     config.paths.add File.join('app', 'api'), glob: File.join('**', '*.rb')
 config.autoload_paths += Dir[Rails.root.join('app', 'api', '*')]

@@ -10,7 +10,6 @@ angular.module('Blog')
     posts.getRubrics().then(function(rubrics) {
     $scope.rubrics = rubrics.data;
   });
-
     $scope.logout = function() { 
       Auth.logout().then(
       $scope.successAlert = function (err) {
@@ -21,18 +20,14 @@ angular.module('Blog')
     };
       
       Auth.currentUser().then(function (user) {
-         $scope.user = user;
+        $scope.user = user;
        }, 
        function(error) {
         }
        );
 
 
-    // $scope.$on('devise:unauthorized', function(event, xhr, deferred) {
-    //         console.log('Authentication Failed!');
-    //          var config = { interceptAuth: true};
-    //        });
-     
+   
      $scope.$on('devise:new-registration', function(e, user) {
        $scope.user = user;
      });
