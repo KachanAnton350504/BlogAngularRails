@@ -53,19 +53,11 @@ function($stateProvider, $urlRouterProvider) {
       templateUrl: 'auth/_register.html',
       controller: 'AuthCtrl',
       onEnter: ['$state', 'Auth','Flash', function($state, Auth, Flash) {
-        // Auth.currentUser().then(function (){
-        //   $state.go('home');
-        // });
+        Auth.currentUser().then(function (){
+          $state.go('home');
+        });
       }]
     });
 
     $urlRouterProvider.otherwise('home');
 }])
-// .config((FlashProvider) => {
-//     FlashProvider.setTimeout(5000);
-//     FlashProvider.setShowClose(true);
-// })
-// .config(function(AuthInterceptProvider) {
-//         // Intercept 401 Unauthorized everywhere
-//         AuthInterceptProvider.interceptAuth(true);
-// });
