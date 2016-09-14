@@ -5890,3 +5890,71 @@ Processing by Devise::SessionsController#create as JSON
   Parameters: {"user"=>{"email"=>"anton.kachan1996@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"anton.kachan1996@gmail.com", "password"=>"[FILTERED]"}}}
   [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "anton.kachan1996@gmail.com"]]
 Completed 401 Unauthorized in 177ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-14 17:49:12 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#angular as HTML
+  Rendered application/angular.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 2370ms (Views: 2357.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app.self-2c5a89e33524941e36cd087e6c4b69eab0ed02a7715901fd82e576aae0836e6e.js?body=1" for 127.0.0.1 at 2016-09-14 17:49:14 +0300
+
+
+Started GET "/assets/redactor-rails.css" for 127.0.0.1 at 2016-09-14 17:49:15 +0300
+
+
+Started GET "/rubrics.json" for 127.0.0.1 at 2016-09-14 17:49:15 +0300
+Processing by RubricsController#index as JSON
+  [1m[35mRubric Load (0.2ms)[0m  SELECT "rubrics".* FROM "rubrics"
+Completed 200 OK in 16ms (Views: 6.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/sign_in.json" for 127.0.0.1 at 2016-09-14 17:49:15 +0300
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/posts.json" for 127.0.0.1 at 2016-09-14 17:49:15 +0300
+Processing by PostsController#index as JSON
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT  "posts".* FROM "posts"  ORDER BY created_at DESC LIMIT 2 OFFSET 0
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 30]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 29]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+Completed 206 Partial Content in 94ms (Views: 64.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/rubrics.json" for 127.0.0.1 at 2016-09-14 17:49:15 +0300
+Processing by RubricsController#index as JSON
+  [1m[36mRubric Load (0.2ms)[0m  [1mSELECT "rubrics".* FROM "rubrics"[0m
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/redactor-rails.css" for 127.0.0.1 at 2016-09-14 17:49:18 +0300
+
+
+Started GET "/assets/angular-flash-alert/dist/angular-flash.js.map" for 127.0.0.1 at 2016-09-14 17:49:18 +0300
