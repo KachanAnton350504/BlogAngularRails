@@ -4,7 +4,7 @@ require 'rails_helper'
 RSpec.describe PostsController, type: :controller do
   login_guest
   let(:json) { JSON.parse(response.body) }
-  let(:posts) { FactoryGirl.build_list(:post, 10) }
+  let(:post) { FactoryGirl.build_list(:post, 10) }
   let(:rubric) {FactoryGirl.create(:rubric)}
   describe "GET #index" do
     it "returns http success" do
@@ -31,13 +31,13 @@ RSpec.describe PostsController, type: :controller do
   describe "GET #show" do
     it "returns http success" do
       post = Post.create(title: "dsad", body: "3213", user_id: "fds")
-      get :show, id: post.id
+      get :comment_show, id: post.id
       expect(response).to have_http_status(:success)
     end
 
     it "returns valid data" do
       post = Post.create(title: "dsad", body: "3213", user_id: "fds")
-      get :show, id: post.id
+      get :comment_show, id: post.id
       expect(json["id"]).to eq(post.id)
     end
   end

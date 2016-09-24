@@ -9,13 +9,13 @@ RSpec.describe CommentsController, type: :controller do
   describe "GET #show" do
     it "returns http success" do
       comment = FactoryGirl.create(:comment)
-      get :show, id: comment.post_id
+      get :comment_show, id: comment.post_id
       expect(response).to have_http_status(:success)
     end
 
     it "Pagination check. We must get two Comments" do
       comments = FactoryGirl.create_list(:comment, 10)
-      get :show, id: comments.first.post_id
+      get :comment_show, id: comments.first.post_id
       expect(json.size).to eq(2)
     end
 

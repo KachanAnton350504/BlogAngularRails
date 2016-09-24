@@ -25,7 +25,7 @@ class CommentsControllerTest < ActionController::TestCase
   end
 
   test "should show comment" do
-    get :show, id: @comment
+    get :comment_show, id: @comment
     assert_response :success
   end
 

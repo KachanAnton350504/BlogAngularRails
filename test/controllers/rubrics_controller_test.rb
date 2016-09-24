@@ -25,7 +25,7 @@ class RubricsControllerTest < ActionController::TestCase
   end
 
   test "should show rubric" do
-    get :show, id: @rubric
+    get :comment_show, id: @rubric
     assert_response :success
   end
 

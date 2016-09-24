@@ -52,7 +52,7 @@ gem 'font-awesome-sass', '~> 4.5.0'
 # Use Unicorn as the app server
 # gem 'unicorn'
 	
-  gem 'pg'
+ # gem 'pg'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

@@ -1,0 +1,56 @@
+{:uriI"‰file://app/assets/javascripts/nav/nav.template.html?type=text/ng-html&id=e57a8fb13f17938d9b6b32482ed6b8114e5a9680a8efe9383e0b11ee5c9e8141:ET:load_pathI"app/assets/javascripts;T:filenameI"1app/assets/javascripts/nav/nav.template.html;T:	nameI"nav/nav.template;T:logical_pathI"nav/nav.template.html;T:content_typeI"text/ng-html;T:sourceI"8
+    <div class="navbar navbar-default ">
+        <div class="container">
+            <a class="navbar-header navbar-brand" href="#/home">The Blog</a>
+            <div class="navbar-collapse collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#/home">Home</a></li>
+                    <li><a href="#/home/create">Create Post</a></li>
+                    <li class="nav-item dropdown-toggle">
+                        <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">Rubrics  <span class="caret"></span></a>
+
+                        <ul class="dropdown-menu" >
+                            <li ng-repeat="rubric in rubrics">
+                                <a ng-href="#/rubrics/{{rubric.id}}">{{rubric.name}}</a></li>
+                        </ul>
+                    </li><!--//dropdown-->
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li ng-show="signedIn()">
+                        <a  href="#/">{{user.email}}
+                            <span class="glyphicon glyphicon-user"></span>
+                        </a>
+                    </li>
+                    <li ng-show="signedIn()">
+                        <a href="#/home" ng-click="logout()">Log Out
+                            <span class="glyphicon glyphicon-log-out"></span>
+                        </a>
+                    </li>
+
+                    <li>
+                    <li ng-hide="signedIn()">
+                        <a href="#/login">Log In<span class="glyphicon glyphicon-log-in"></span>
+                        </a>
+                    </li>
+                    </li>
+
+
+                    <li>
+                    <li ng-hide="signedIn()"><a href="#/register">Register
+                        <span class="glyphicon glyphicon-user"></span>
+                    </a></li>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+<flash-message>
+    <!-- <div class="my-flash"></div> -->
+</flash-message>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"?file-digest://app/assets/javascripts/nav/nav.template.html;TTF:charsetI"
+utf-8;F:digest"%²‘¼(Én8……¢m0^üÀÄ¯3-lìzPé:lengthi8:dependencies_digest"%¢KHè¼È„a}"GÂQä}73ÚQv~=‡S=âÂ­ò:idI"Ee57a8fb13f17938d9b6b32482ed6b8114e5a9680a8efe9383e0b11ee5c9e8141;F:
+mtimel+CåW

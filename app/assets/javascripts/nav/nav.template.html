@@ -1,0 +1,48 @@
+
+    <div class="navbar navbar-default ">
+        <div class="container">
+            <a class="navbar-header navbar-brand" href="#/home">The Blog</a>
+            <div class="navbar-collapse collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#/home">Home</a></li>
+                    <li><a href="#/home/create">Create Post</a></li>
+                    <li class="nav-item dropdown-toggle">
+                        <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">Rubrics  <span class="caret"></span></a>
+
+                        <ul class="dropdown-menu" >
+                            <li ng-repeat="rubric in rubrics">
+                                <a ng-href="#/rubrics/{{rubric.id}}">{{rubric.name}}</a></li>
+                        </ul>
+                    </li><!--//dropdown-->
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li ng-show="signedIn()">
+                        <a  href="#/">{{user.email}}
+                            <span class="glyphicon glyphicon-user"></span>
+                        </a>
+                    </li>
+                    <li ng-show="signedIn()">
+                        <a href="#/home" ng-click="logout()">Log Out
+                            <span class="glyphicon glyphicon-log-out"></span>
+                        </a>
+                    </li>
+
+                    <li>
+                    <li ng-hide="signedIn()">
+                        <a href="#/login">Log In<span class="glyphicon glyphicon-log-in"></span>
+                        </a>
+                    </li>
+                    </li>
+
+
+                    <li>
+                    <li ng-hide="signedIn()"><a href="#/register">Register
+                        <span class="glyphicon glyphicon-user"></span>
+                    </a></li>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+

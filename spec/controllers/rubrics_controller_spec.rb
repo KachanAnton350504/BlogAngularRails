@@ -7,7 +7,7 @@ RSpec.describe RubricsController, type: :controller do
   let(:rubrics) { FactoryGirl.build_list(:rubric, 50) }
   let(:json) { JSON.parse(response.body) }
   let(:rubric) { FactoryGirl.create(:rubric) } 
-  let(:posts) { FactoryGirl.build_list(:post, 10) }
+  let(:post) { FactoryGirl.build_list(:post, 10) }
 
 
   describe "GET #index" do
@@ -25,21 +25,21 @@ RSpec.describe RubricsController, type: :controller do
 
   describe "GET #show" do
     it "returns http success" do
-      get :show, id: rubric.id
+      get :comment_show, id: rubric.id
       expect(response).to have_http_status(:success)
     end
 
     it "Pagination check. We must get two Posts" do
       id = rubric.id
       posts.each {  |post| post.save(validate: false)  }
-      get :show, id: id
+      get :comment_show, id: id
       expect(json.size).to eq(2)
     end
 
     it "Show posts. Sorting by date created." do
        id = rubric.id
        posts.each {  |post| post.save(validate: false)  }      
-       get :show, id: id
+       get :comment_show, id: id
        expect(json.first["id"]).to eq(10)
        expect(json.second["id"]).to eq(9)
     end  
